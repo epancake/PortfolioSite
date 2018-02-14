@@ -2,4 +2,42 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: url('/brick.jpg') no-repeat fixed center;
+  background-size: 100%;
+}
+
+@font-face {
+font-family: 'HighVoltage Rough';
+src: url('HighVoltage Rough.ttf') format('truetype');
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  padding-top: 4rem
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: 'HighVoltage Rough';
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: 'HighVoltage Rough';
+}
+
+p, h2 {
+  padding-left: .25rem;
+  padding-top: 1rem;
+}
+
+h1, h2, p, .svg {
+  color: #fff;
+  grid-column-start: 2;
+  justify-self: start;
+}
+
+.typewriter {
+  font-family: 'HighVoltage Rough';
 }
