@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import 'antd/dist/antd.css'
 import './App.css';
 import About from './Components/About.js'
 import Projects from './Components/Projects.js'
@@ -39,7 +40,8 @@ class App extends Component {
 
     this.state = {
       jokeText: "",
-      typewriter: ""
+      typewriter: "",
+      ghost: ""
     }
 
   }
@@ -47,6 +49,8 @@ class App extends Component {
   componentDidMount(){
     setTimeout(()=>
     { this.setState({jokeText: "and yes... that's really my last name.", typewriter: "typewriter"})}, 3000);
+    setTimeout(()=>
+    { this.setState({ghost: "hidden"})}, 8000);
   }
 
 
@@ -67,14 +71,16 @@ class App extends Component {
               <p>Resume</p>
             </Link>
           </nav>
-            <Link className="navitem" to="/">
-              <header className="header">
+          <header className="header">
+            <Link className="name" to="/">
                 <h1 className="App-title">Emily Pancake</h1>
-                <h2>Web Developer</h2>
-                <p className={this.state.typewriter}>{this.state.jokeText}</p>
-              </header>
             </Link>
-          <div className='routes'>
+            <h2>Web Developer and Design Dork</h2>
+            <div className={this.state.ghost}>
+              <p className={this.state.typewriter}>{this.state.jokeText}</p>
+            </div>
+          </header>
+        <div className='routes'>
               <Route path="/about" render={()=><About key="1" />} />
               <Route path="/projects" render={()=><Projects projects={projects} key="2" />} />
               <Route path="/resume" render={()=><Resume key="3" />} />

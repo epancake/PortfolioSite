@@ -8,8 +8,7 @@ body {
   rgba(0, 0, 0, 0.7)
   ),
     url('/brick.jpg') no-repeat fixed center;
-
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 
 @font-face {
@@ -19,26 +18,34 @@ src: url('HighVoltage Rough.ttf') format('truetype');
 
 .header {
   display: grid;
-  grid-template-columns: 10% 80% 10%;
-  padding-top: 1rem
+  grid-template-columns: 5% 85% 10%;
 }
 
 h1 {
   font-size: 5rem;
   font-family: 'HighVoltage Rough';
+  margin-bottom: 0;
+  text-decoration: underline;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: 'HighVoltage Rough';
-  padding-left: .25rem;
+  margin-top: -1rem
 }
 
-.typewriter, h2 {
-  padding-top: 1rem;
+h3 {
+  font-size: 1rem;
+  text-align: center;
+  font-family: 'HighVoltage Rough';
+  color: white
 }
 
-h1, h2, p, .svg {
+p {
+  color: rgb(97, 131, 93);
+}
+
+.name, h1, h2, .header div, .svg {
   color: #fff;
   grid-column-start: 2;
   justify-self: start;
@@ -79,9 +86,11 @@ span{
   100%{ width: 100; }
 }
 
-@keyframes blink{
-  to{opacity: .0;}
+.hidden {
+  display: none;
 }
+
+/*@keyframes blink{to{opacity: .0;}}*/
 
 .nav {
   display: flex;
@@ -93,4 +102,47 @@ span{
   font-size: 1.5rem;
   font-family: 'HighVoltage Rough';
   padding: 1rem 2rem 1rem 0;
+}
+
+p {
+  margin: 0
+}
+
+.card {
+  background-color: rgb(97, 131, 93);
+  opacity: 0.6;
+  border: 1px solid black;
+  width: 33.3%;
+  margin-top: 2rem;
+}
+
+.maincard {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.card:hover {
+  opacity: 1;
+}
+
+.maincard {
+  padding: .25rem;
+}
+
+.routes {
+  display: flex
+}
+
+.cardButton {
+  border-radius: 3px;
+  border: 1px solid rgb(31, 33, 33);
+  color: rgb(31, 33, 33);
+  background-color: white;
+}
+
+.cardButton:hover {
+  border: 1px solid white;
+  color: white;
+  background-color: rgb(31, 33, 33);
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Icon, Select, Modal } from 'antd';
 
+
 class ProjectCard extends Component {
 
   constructor(props) {
@@ -39,9 +40,9 @@ class ProjectCard extends Component {
       <div className="card">
 
         <main className='maincard'>
-          <h2 className='cardname'>{this.props.project.name}</h2>
+          <h3 className='cardname'>{this.props.project.name}</h3>
           <aside className="cardbuttons">
-              <button id='ant-btn-primary'onClick={this.openProjectModal}> Details </button>
+              <button className="cardButton" onClick={this.openProjectModal}> Details </button>
           </aside>
         </main>
 
