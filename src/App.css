@@ -1,1 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background:
+  linear-gradient(
+  rgba(0, 0, 0, 0.7),
+  rgba(0, 0, 0, 0.7)
+  ),
+    url('/brick.jpg') no-repeat fixed center;
 
+  background-size: 100%;
+}
+
+@font-face {
+font-family: 'HighVoltage Rough';
+src: url('HighVoltage Rough.ttf') format('truetype');
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  padding-top: 1rem
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: 'HighVoltage Rough';
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: 'HighVoltage Rough';
+  padding-left: .25rem;
+}
+
+.typewriter, h2 {
+  padding-top: 1rem;
+}
+
+h1, h2, p, .svg {
+  color: #fff;
+  grid-column-start: 2;
+  justify-self: start;
+}
+
+.typewriter{
+  color: white;
+  font-family: "Courier";
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 30em;
+  animation:
+    type 3s steps(40, end),
+    blink-caret .75s step-end 10s;
+}
+
+p:nth-child(2){
+  animation: type2 6s steps(60, end);
+}
+
+p a{
+  color: white;
+  text-decoration: none;
+}
+
+span{
+  animation: blink 1s infinite;
+}
+
+@keyframes type{
+  from { width: 0; }
+}
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; }
+}
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgb(31, 33, 33)
+}
+
+.navitem {
+  font-size: 1.5rem;
+  font-family: 'HighVoltage Rough';
+  padding: 1rem 2rem 1rem 0;
+}

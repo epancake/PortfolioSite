@@ -1,59 +1,87 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
-import * as d3 from "d3"
+import About from './Components/About.js'
+import Projects from './Components/Projects.js'
+import Resume from './Components/Resume.js'
 
-var i = 0;
-var data = [
-    'Lorem ipsum dolor sit amet, consectetur adipisicing elit,',
-    'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    'Ut enim ad minim veniam, quis nostrud exercitation',
-    'ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    'Duis aute irure dolor in reprehenderit',
-    'in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    'Excepteur sint occaecat cupidatat non proident,',
-    'sunt in culpa qui officia deserunt mollit anim id est laborum.'];
+const projects = [
+    { id: 1,
+      name: "Planet Wager",
+      description: "Space betting App",
+      githubRepo: "https://github.com/Space-Team/Space-Betting",
+      deployedLink: "https://planetwager.herokuapp.com/",
+      image: "/planetwager.png",
+      tech: "React, AntDesign React Component Library, Node.js, Express, PostgreSQL, Knex.js, Heroku"
+    },
+    { id: 2,
+      name: "SeekEasy",
+      description: "Happy hour locator",
+      githubRepo: "https://github.com/epancake/SeekEasy",
+      deployedLink: "https://seekeasybaker.firebaseapp.com",
+      image: "/seekeasy.png",
+      tech: "JavaScript, HTML, CSS, Express, Node.js"
+    },
+    { id: 2,
+      name: "Women's March Site",
+      description: "Website for the 2018 Denver womens's march",
+      githubRepo: null,
+      deployedLink: "https://www.marchoncolorado.org/",
+      image: "/womensmarch.png",
+      tech: "Wix"
+    },
+]
 
 class App extends Component {
 
   constructor(props) {
     super(props);
 
-  this.transition = this.transition.bind(this)
+    this.state = {
+      jokeText: "",
+      typewriter: ""
+    }
+
   }
 
   componentDidMount(){
-    d3.select('svg')
-    .transition();
+    setTimeout(()=>
+    { this.setState({jokeText: "and yes... that's really my last name.", typewriter: "typewriter"})}, 3000);
   }
 
-  transition() {
-    d3.select('text').transition()
-        .duration(5000)
-        .ease("linear")
-        .tween("text", function () {
-            var newText = data[i];
-            var textLength = newText.length;
-            return function (t) {
-                this.textContent = newText.slice(0,
-                                   Math.round( t * textLength) );
-            };
-        });
-
-    i = (i + 1) % data.length;
-  }
 
   render() {
 
     return (
       <div className="App">
-        <header className="header">
-          <h1 className="App-title">Emily Pancake</h1>
-          <h2>Web Developer</h2>
-          <svg className="svg" height="30" width="500">
-              <text x="250" y="15" fill="black" text-anchor="middle" font-size="16px">Intro text - click mouse on this text</text>
-          </svg>
-          <p className="typewriter">...yes that's my last name.</p>
-        </header>
+      <Router >
+        <div>
+          <nav className="nav">
+            <Link className="navitem" to="/about">
+              <p>About</p>
+            </Link>
+            <Link className="navitem" to="/projects">
+              <p>Projects</p>
+            </Link>
+            <Link className="navitem" to="/resume">
+              <p>Resume</p>
+            </Link>
+          </nav>
+            <Link className="navitem" to="/">
+              <header className="header">
+                <h1 className="App-title">Emily Pancake</h1>
+                <h2>Web Developer</h2>
+                <p className={this.state.typewriter}>{this.state.jokeText}</p>
+              </header>
+            </Link>
+          <div className='routes'>
+              <Route path="/about" render={()=><About key="1" />} />
+              <Route path="/projects" render={()=><Projects projects={projects} key="2" />} />
+              <Route path="/resume" render={()=><Resume key="3" />} />
+          </div>
+        </div>
+      </Router>
+
       </div>
     );
   }
