@@ -13,7 +13,8 @@ const projects = [
       githubRepo: "https://github.com/Space-Team/Space-Betting",
       deployedLink: "https://planetwager.herokuapp.com/",
       image: "/planetwager.png",
-      tech: "React, AntDesign React Component Library, Node.js, Express, PostgreSQL, Knex.js, Heroku"
+      tech: "React, AntDesign React Component Library, Node.js, Express, PostgreSQL, Knex.js, Heroku",
+      thumbnail: "/planetWagerSquare.png",
     },
     { id: 2,
       name: "SeekEasy",
@@ -21,7 +22,8 @@ const projects = [
       githubRepo: "https://github.com/epancake/SeekEasy",
       deployedLink: "https://seekeasybaker.firebaseapp.com",
       image: "/seekeasy.png",
-      tech: "JavaScript, HTML, CSS, Express, Node.js"
+      tech: "JavaScript, HTML, CSS, Express, Node.js",
+      thumbnail: "/seekeasySquare-03.png",
     },
     { id: 2,
       name: "Women's March Site",
@@ -29,7 +31,8 @@ const projects = [
       githubRepo: null,
       deployedLink: "https://www.marchoncolorado.org/",
       image: "/womensmarch.png",
-      tech: "Wix"
+      tech: "Wix",
+      thumbnail: "/womensMarchSquare.png",
     },
 ]
 
@@ -58,35 +61,43 @@ class App extends Component {
 
     return (
       <div className="App">
-      <Router >
         <div>
-          <nav className="nav">
-            <Link className="navitem" to="/about">
-              <p>About</p>
-            </Link>
-            <Link className="navitem" to="/projects">
-              <p>Projects</p>
-            </Link>
-            <Link className="navitem" to="/resume">
-              <p>Resume</p>
-            </Link>
-          </nav>
-          <header className="header">
-            <Link className="name" to="/">
+          <div className="header">
+            <div className="logobox">
+              <img className="logo" src="/eplogo.png"/>
+            </div>
+            <nav className="nav">
+              <a className="navitem" href="#about">
+                <p>About</p>
+              </a>
+              <a className="navitem" href="#projects">
+                <p>Projects</p>
+              </a>
+              <a className="navitem" href="#resume">
+                <p>Resume</p>
+              </a>
+            </nav>
+          </div>
+          <header className="heading">
+            <a className="name" href="/">
                 <h1 className="App-title">Emily Pancake</h1>
-            </Link>
-            <h2>Web Developer and Design Dork</h2>
+            </a>
+            <h2 className="tagline" >Web Developer and Design Dork</h2>
             <div className={this.state.ghost}>
               <p className={this.state.typewriter}>{this.state.jokeText}</p>
             </div>
           </header>
+          <a name="about"></a>
+          <About key="1"/>
+          <a name="projects"></a>
+          <div className="projectList">
+            <Projects projects={projects} key="2" />
+          </div>
+          <a name="resume"></a>
+          <Resume key="3"/>
         <div className='routes'>
-              <Route path="/about" render={()=><About key="1" />} />
-              <Route path="/projects" render={()=><Projects projects={projects} key="2" />} />
-              <Route path="/resume" render={()=><Resume key="3" />} />
           </div>
         </div>
-      </Router>
 
       </div>
     );
