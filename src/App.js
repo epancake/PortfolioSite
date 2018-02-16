@@ -9,7 +9,7 @@ import Resume from './Components/Resume.js'
 const projects = [
     { id: 1,
       name: "Planet Wager",
-      description: "Space betting App",
+      description: "Space-themed friendly betting App",
       githubRepo: "https://github.com/Space-Team/Space-Betting",
       deployedLink: "https://planetwager.herokuapp.com/",
       image: "/planetwager.png",
@@ -25,7 +25,16 @@ const projects = [
       tech: "JavaScript, HTML, CSS, Express, Node.js",
       thumbnail: "/seekeasySquare-03.png",
     },
-    { id: 2,
+    { id: 3,
+      name: "Beer Boarding",
+      description: "App created to allow students learning JavaScript practice white boarding skills",
+      githubRepo: "https://github.com/epancake/Beer-Boarding-frontend",
+      deployedLink: "https://beerboardingg70.firebaseapp.com/",
+      image: "/beerboarding.png",
+      tech: "React, AntDesign React Component Library, Node.js, Express, PostgreSQL, Knex.js, Heroku, Firebase",
+      thumbnail: "/beerBoardSquare.png",
+    },
+    { id: 4,
       name: "Women's March Site",
       description: "Website for the 2018 Denver womens's march",
       githubRepo: null,
@@ -33,7 +42,7 @@ const projects = [
       image: "/womensmarch.png",
       tech: "Wix",
       thumbnail: "/womensMarchSquare.png",
-    },
+    }
 ]
 
 class App extends Component {
@@ -67,11 +76,11 @@ class App extends Component {
               <img className="logo" src="/eplogo.png"/>
             </div>
             <nav className="nav">
-              <a className="navitem" href="#about">
-                <p>About</p>
-              </a>
               <a className="navitem" href="#projects">
                 <p>Projects</p>
+              </a>
+              <a className="navitem" href="#about">
+                <p>About</p>
               </a>
               <a className="navitem" href="#resume">
                 <p>Resume</p>
@@ -87,12 +96,13 @@ class App extends Component {
               <p className={this.state.typewriter}>{this.state.jokeText}</p>
             </div>
           </header>
+          <a name="projects"></a>
+          <h2 class="sectionTitle">Projects</h2>
+          <section className="projectList">
+            <Projects projects={projects} key="2" />
+          </section>
           <a name="about"></a>
           <About key="1"/>
-          <a name="projects"></a>
-          <div className="projectList">
-            <Projects projects={projects} key="2" />
-          </div>
           <a name="resume"></a>
           <Resume key="3"/>
         <div className='routes'>

@@ -138,7 +138,6 @@ p {
   opacity: 0.8;
   border: 1px solid black;
   width: 33.3%;
-  margin-top: 2rem;
 }
 
 .maincard {
@@ -169,6 +168,28 @@ p {
   display: flex
 }
 
-h3 {
-    opacity: 1;
+.sectionTitle {
+  text-align: center;
+  color: rgb(97, 131, 93);
+  margin-top: 3rem;
+}
+
+.about {
+  background: white;
+  color: rgb(97, 131, 93);
+  text-align: center;
+}
+
+.about p {
+  padding: 1rem;
+}
+
+.tldr-btn {
+  margin-bottom: .5rem;
+  box-shadow: 1px 1px 10px grey
+}
+
+.ant-btn:hover {
+  border-color: rgb(97, 131, 93);
+  color: rgb(97, 131, 93);
 }

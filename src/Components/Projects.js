@@ -10,8 +10,10 @@ const Projects = (props) => {
   }
 
   return props.projects.map((project) => {
-    return <ProjectCard key={project.id}
-      project={project}/>
+    return (
+      <ProjectCard key={project.id}
+        project={project}/>
+    )
   })
 }
 
