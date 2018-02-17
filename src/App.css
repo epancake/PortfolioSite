@@ -275,5 +275,8 @@ p {
   margin: .3rem 0 .5rem 0;
   justify-self: center;
   padding: 0 3rem 0 3rem;
+}
 
+.projectImage {
+  height: 8rem;
 }
