@@ -5,6 +5,8 @@ import './App.css';
 import About from './Components/About.js'
 import Projects from './Components/Projects.js'
 import Resume from './Components/Resume.js'
+import Footer from './Components/Footer.js'
+
 
 const projects = [
     { id: 1,
@@ -105,8 +107,8 @@ class App extends Component {
           <About key="1"/>
           <a name="resume"></a>
           <Resume key="3"/>
-        <div className='routes'>
-          </div>
+          <a name="contacts"></a>
+          <Footer key="4"/>
         </div>
 
       </div>

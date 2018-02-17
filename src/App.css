@@ -112,6 +112,11 @@ a {
   color: white
 }
 
+a p::selection {
+  text-decoration: underline;
+  text-decoration-color: white
+}
+
 .logobox {
   display: flex;
   justify-content: flex-start;
@@ -171,7 +176,8 @@ p {
 .sectionTitle {
   text-align: center;
   color: rgb(97, 131, 93);
-  margin-top: 3rem;
+  margin-top: 2rem;
+  font-size: 3rem
 }
 
 .about {
@@ -192,4 +198,82 @@ p {
 .ant-btn:hover {
   border-color: rgb(97, 131, 93);
   color: rgb(97, 131, 93);
+}
+
+.resume {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.footer {
+  background-color: rgb(31, 33, 33);
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  display: grid;
+  grid-template-rows: 33% 33% 10%;
+  grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr;
+  color: white;
+}
+
+.gridcol1 {
+  grid-column-start: 1
+}
+
+.gridcol2 {
+  grid-column-start: 2
+}
+
+.gridcol3 {
+  grid-column-start: 3
+}
+
+.gridcol4 {
+  grid-column-start: 4
+}
+
+.gridcol5 {
+  grid-column-start: 5
+}
+
+.gridcol6 {
+  grid-column-start: 6
+}
+
+.gridrow1 {
+  grid-row-start: 1
+}
+
+.gridrow2 {
+  grid-row-start: 2
+}
+
+.gridrow3 {
+  grid-row-start: 3
+}
+
+.gridcol34 {
+  grid-column: 3 / 5
+}
+
+.icon {
+  height: 1.25rem;
+  justify-self: end;
+  padding-right: .5rem;
+  margin: .5rem 0 .5rem 0;
+}
+
+.ftext {
+  align-self: left;
+  color: white;
+  margin: .5rem 0 .5rem 0;
+}
+
+.copy {
+  color: white;
+  margin: .3rem 0 .5rem 0;
+  justify-self: center;
+  padding: 0 3rem 0 3rem;
+
 }
