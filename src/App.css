@@ -115,6 +115,10 @@ span{
   font-family: 'HighVoltage Rough';
   padding: 1rem 2rem 1rem 0;
 }
+.navitem:hover {
+  text-decoration: underline;
+  text-decoration-color: white
+}
 
 a {
   color: white
@@ -184,7 +188,7 @@ p {
 .sectionTitle {
   text-align: center;
   color: rgb(97, 131, 93);
-  margin-top: 2rem;
+  margin: 2rem 0 0 0;
   font-size: 3rem
 }
 
@@ -215,9 +219,13 @@ p {
   padding: 2rem;
 }
 
+.footerContainer{
+  background-color: rgb(31, 33, 33);
+}
+
 .footer {
   background-color: rgb(31, 33, 33);
-  margin-top: 2rem;
+  margin-top: .5rem;
   padding-bottom: 1rem;
   display: grid;
   grid-template-rows: 33% 33% 10%;
@@ -304,9 +312,29 @@ p {
 }
 
 .tall .projectText {
-  padding-right: 1rem;
   width: 15rem;
   color: rgb(31, 33, 33);
+}
+
+.tall {
+  display: flex;
+  justify-content: space-around;
+}
+
+.tall .tech {
+  margin-left: 2rem;
+}
+
+.tall .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  padding: 1rem 0 2rem 0;
+}
+
+.tall .links a {
+  padding: 1rem 0 0 0;
 }
 
 .wide .projectText {
@@ -323,6 +351,12 @@ p {
 .wide .imageAndTech {
   display: flex;
   justify-content: space-around;
+  margin: 0 1rem 0 1rem;
+}
+
+.tall .imageAndTech {
+  display: flex;
+  justify-content: space-between;
   margin: 0 1rem 0 1rem;
 }
 
@@ -355,4 +389,9 @@ ul {
 li span {
   position: relative;
   left: -5px;
+}
+
+.projectDesc {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: .75rem;
 }

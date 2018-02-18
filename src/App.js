@@ -11,7 +11,7 @@ import Footer from './Components/Footer.js'
 const projects = [
     { id: 1,
       name: "Planet Wager",
-      description: "Space-themed friendly betting App",
+      description: "The betting app that allows you to bet with your friends and keep track of who's losing spacebucks and who is raking them in. Users can define their own bet, and invite their friends to accept the bet. After all, gambling is not regulated in space! This is a group project developed with Agile methodologies. More details in the Github repo Readme.",
       githubRepo: "https://github.com/Space-Team/Space-Betting",
       deployedLink: "https://planetwager.herokuapp.com/",
       image: "/planetwager.png",
@@ -21,7 +21,7 @@ const projects = [
     },
     { id: 2,
       name: "SeekEasy",
-      description: "Happy hour locator",
+      description: "A happy hour locator for my Denver neighborhood, Baker. Users can search for happy hours by day of the week, and add new happy hours to the dataset.",
       githubRepo: "https://github.com/epancake/SeekEasy",
       deployedLink: "https://seekeasybaker.firebaseapp.com",
       image: "/seekeasy.png",
@@ -41,11 +41,11 @@ const projects = [
     },
     { id: 4,
       name: "Women's March Site",
-      description: "Website for the 2018 Denver womens's march",
+      description: "I was honored to make the Website for the 2018 Denver Womens's March. I worked with multiple stakeholders to create and design content according to the branding from the national March On organization. The organizers requested I use Wix so that they could make changes as needed.",
       githubRepo: null,
       deployedLink: "https://www.marchoncolorado.org/",
       image: "/womensmarch.png",
-      tech: ["Wix"],
+      tech: ["Wix", "HTML"],
       thumbnail: "/womensMarchSquare.png",
       display: "wide"
     }
@@ -91,6 +91,9 @@ class App extends Component {
               <a className="navitem" href="#resume">
                 <p>Resume</p>
               </a>
+              <a className="navitem" href="#contact">
+                <p>Contact</p>
+              </a>
             </nav>
           </div>
           <header className="heading">
@@ -111,7 +114,7 @@ class App extends Component {
           <About key="1"/>
           <a name="resume"></a>
           <Resume key="3"/>
-          <a name="contacts"></a>
+          <a name="contact"></a>
           <Footer key="4"/>
         </div>
 

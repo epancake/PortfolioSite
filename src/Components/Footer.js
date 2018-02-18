@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function Footer() {
     return  (
+      <div className="footerContainer">
+      <h2 className="sectionTitle gridcol4 gridrow1">Contact</h2>
       <div className="footer">
         <img className="icon gridcol1 gridrow1" src="/icons/location.png"/>
         <p className="ftext gridcol2 gridrow1">Denver, Colorado</p>
@@ -15,5 +17,7 @@ export default function Footer() {
         <img className="icon gridcol5 gridrow2" src="/icons/github.png"/>
         <p className="ftext gridcol6 gridrow2">/epancake</p>
       </div>
+      </div>
+
     )
 }
