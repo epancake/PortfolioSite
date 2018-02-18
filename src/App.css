@@ -45,6 +45,14 @@ h3 {
 
 }
 
+h4 {
+  font-size: 1rem;
+  font-family: 'HighVoltage Rough';
+  color: rgb(97, 131, 93);
+  font-weight: bold;
+  margin: 0;
+}
+
 p {
   color: rgb(97, 131, 93);
 }
@@ -278,7 +286,7 @@ p {
 }
 
 .projectImage {
-  height: 19rem;
+  height: 17rem;
 }
 
 .projectLink {
@@ -295,13 +303,56 @@ p {
   justify-content: space-between
 }
 
-.projectText {
+.tall .projectText {
   padding-right: 1rem;
   width: 15rem;
+  color: rgb(31, 33, 33);
+}
+
+.wide .projectText {
+  color: rgb(31, 33, 33);
+  margin: 0 1rem 0 1rem;
+}
+
+.wide .links {
+  display: flex;
+  justify-content: space-around;
+  margin: .5rem 0 1rem 0;
+}
+
+.wide .imageAndTech {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 1rem 0 1rem;
+}
+
+.wide .tech {
+  margin: 0 0 0 1rem;
 }
 
 .ant-modal-content{
-   width:auto;
    margin-left:-5rem;
    margin-top: -2rem;
+}
+
+.ant-modal-body {
+  padding: .5rem;
+}
+
+.ant-modal-title{
+  color: rgb(97, 131, 93);
+  font-size: 1.8rem;
+  font-family: 'HighVoltage Rough';
+}
+
+ul {
+  list-style-type: circle;
+  list-style-position: inside;
+  font-size: .65rem;
+  width: 6rem;
+}
+
+li span {
+  position: relative;
+  left: -5px;
 }

@@ -15,7 +15,7 @@ const projects = [
       githubRepo: "https://github.com/Space-Team/Space-Betting",
       deployedLink: "https://planetwager.herokuapp.com/",
       image: "/planetwager.png",
-      tech: ["React", "AntDesign React Component Library", "Node.js", "Express", "PostgreSQL", "Knex.js", "Heroku"],
+      tech: ["React", "AntDesign", "Node.js", "Express", "PostgreSQL", "Knex.js", "Heroku"],
       thumbnail: "/planetWagerSquare.png",
       display: "tall"
     },
@@ -31,11 +31,11 @@ const projects = [
     },
     { id: 3,
       name: "Beer Boarding",
-      description: "App created to allow students learning JavaScript practice white boarding skills",
+      description: "As co-chair of a meetup at Galvanize called Beer-Boarding, I identified a need to organize and track JavaScript white boarding questions. I created this full-stack application to empower students and champions to practice white boarding skills. More details are available on the Github Repo Readme.",
       githubRepo: "https://github.com/epancake/Beer-Boarding-frontend",
       deployedLink: "https://beerboardingg70.firebaseapp.com/",
       image: "/beerboarding.png",
-      tech: ["React", "AntDesign React Component Library", "Node.js", "Express", "PostgreSQL", "Knex.js", "Heroku", "Firebase"],
+      tech: ["React", "AntDesign", "Node.js", "Express", "PostgreSQL", "Knex.js", "Heroku", "Firebase"],
       thumbnail: "/beerBoardSquare.png",
       display: "wide"
     },

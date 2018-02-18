@@ -16,6 +16,7 @@ class ProjectCard extends Component {
   this.closeProjectModal = this.closeProjectModal.bind(this);
   this.findGithub = this.findGithub.bind(this);
   this.techUsed = this.techUsed.bind(this);
+  this.getLinks = this.getLinks.bind(this);
   }
 
   componentDidMount () {
@@ -42,10 +43,24 @@ class ProjectCard extends Component {
   
   techUsed() {
     return this.props.project.tech.map(item => {
-      console.log(item);
-      return <li>{item}</li>
+      return <li key={item}><span>{item}</span></li>
     })
   }
+  
+  getLinks() {
+    if (this.props.project.githubRepo) {
+      return (
+        <div className="links">
+          <a className="projectLink" href={this.props.project.githubRepo} ><Icon type="github" /> Github Repo</a>
+          <a className="projectLink" href={this.props.project.deployedLink} ><Icon type="link" /> Deployed Site</a>
+        </div>
+      )
+    } else return (<div className="links">
+        <a className="projectLink" href={this.props.project.deployedLink} ><Icon type="link" /> Deployed Site</a>
+      </div>
+    )
+  }
+
 
   render() {
 
@@ -68,17 +83,20 @@ class ProjectCard extends Component {
           onCancel={this.closeProjectModal}
           title={this.props.project.name}
           footer={null}
-          className="bigModal"
         >
-        <div className="projectModal">
+        <div className={this.props.project.display}>
           <div className="projectText">
+            <h4>Description:</h4>
             <p className="projectDesc">{this.props.project.description} </p>
-            <p>{this.findGithub()}</p>
-            <a className="projectLink" href={this.props.project.deployedLink} >Deployed Site</a>
-            <p>Technology Used:</p>
-            <ul>{this.techUsed()} </ul>
+            <div>{this.getLinks()}</div>
           </div>
-          <img className="projectImage" src={this.props.project.image} />
+          <div className="imageAndTech">
+            <img className="projectImage" src={this.props.project.image} />
+            <aside className="tech">
+              <h4>Technology:</h4>
+              <ul className="techlist">{this.techUsed()}</ul>
+            </aside>
+          </div>
         </div>
         </Modal>
       </div>
