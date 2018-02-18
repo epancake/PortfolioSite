@@ -8,6 +8,7 @@ import Resume from './Components/Resume.js'
 import Footer from './Components/Footer.js'
 
 
+
 const projects = [
     { id: 1,
       name: "Planet Wager",
