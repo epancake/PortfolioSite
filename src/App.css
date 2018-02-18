@@ -67,7 +67,7 @@ p {
     blink-caret .75s step-end 10s;
 }
 
-p:nth-child(2){
+.joke:nth-child(2){
   animation: type2 6s steps(60, end);
 }
 
@@ -278,7 +278,7 @@ p {
 }
 
 .projectImage {
-  height: 8rem;
+  height: 19rem;
 }
 
 .projectLink {
@@ -291,5 +291,17 @@ p {
 }
 
 .projectModal {
-  display: flex
+  display: flex;
+  justify-content: space-between
+}
+
+.projectText {
+  padding-right: 1rem;
+  width: 15rem;
+}
+
+.ant-modal-content{
+   width:auto;
+   margin-left:-5rem;
+   margin-top: -2rem;
 }

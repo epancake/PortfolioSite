@@ -15,7 +15,7 @@ const projects = [
       githubRepo: "https://github.com/Space-Team/Space-Betting",
       deployedLink: "https://planetwager.herokuapp.com/",
       image: "/planetwager.png",
-      tech: "React, AntDesign React Component Library, Node.js, Express, PostgreSQL, Knex.js, Heroku",
+      tech: ["React", "AntDesign React Component Library", "Node.js", "Express", "PostgreSQL", "Knex.js", "Heroku"],
       thumbnail: "/planetWagerSquare.png",
     },
     { id: 2,
@@ -24,7 +24,7 @@ const projects = [
       githubRepo: "https://github.com/epancake/SeekEasy",
       deployedLink: "https://seekeasybaker.firebaseapp.com",
       image: "/seekeasy.png",
-      tech: "JavaScript, HTML, CSS, Express, Node.js",
+      tech: ["JavaScript", "HTML", "CSS", "Express", "Node.js"],
       thumbnail: "/seekeasySquare-03.png",
     },
     { id: 3,
@@ -33,7 +33,7 @@ const projects = [
       githubRepo: "https://github.com/epancake/Beer-Boarding-frontend",
       deployedLink: "https://beerboardingg70.firebaseapp.com/",
       image: "/beerboarding.png",
-      tech: "React, AntDesign React Component Library, Node.js, Express, PostgreSQL, Knex.js, Heroku, Firebase",
+      tech: ["React", "AntDesign React Component Library", "Node.js", "Express", "PostgreSQL", "Knex.js", "Heroku", "Firebase"],
       thumbnail: "/beerBoardSquare.png",
     },
     { id: 4,
@@ -42,7 +42,7 @@ const projects = [
       githubRepo: null,
       deployedLink: "https://www.marchoncolorado.org/",
       image: "/womensmarch.png",
-      tech: "Wix",
+      tech: ["Wix"],
       thumbnail: "/womensMarchSquare.png",
     }
 ]
@@ -54,7 +54,7 @@ class App extends Component {
 
     this.state = {
       jokeText: "",
-      typewriter: "",
+      typewriter: "joke",
       ghost: ""
     }
 
@@ -62,7 +62,7 @@ class App extends Component {
 
   componentDidMount(){
     setTimeout(()=>
-    { this.setState({jokeText: "and yes... that's really my last name.", typewriter: "typewriter"})}, 3000);
+    { this.setState({jokeText: "and yes... that's really my last name.", typewriter: "typewriter joke"})}, 3000);
     setTimeout(()=>
     { this.setState({ghost: "hidden"})}, 8000);
   }
@@ -99,7 +99,7 @@ class App extends Component {
             </div>
           </header>
           <a name="projects"></a>
-          <h2 class="sectionTitle">Projects</h2>
+          <h2 className="sectionTitle">Projects</h2>
           <section className="projectList">
             <Projects projects={projects} key="2" />
           </section>

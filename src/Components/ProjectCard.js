@@ -14,7 +14,8 @@ class ProjectCard extends Component {
 
   this.openProjectModal = this.openProjectModal.bind(this);
   this.closeProjectModal = this.closeProjectModal.bind(this);
-
+  this.findGithub = this.findGithub.bind(this);
+  this.techUsed = this.techUsed.bind(this);
   }
 
   componentDidMount () {
@@ -31,6 +32,19 @@ class ProjectCard extends Component {
 
   closeProjectModal() {
     this.setState({projectModalIsOpen: false});
+  }
+  
+  findGithub() {
+    if (this.props.project.githubRepo) {
+      return <a className="projectLink" href={this.props.project.githubRepo} >Github Repo</a>
+    }
+  }
+  
+  techUsed() {
+    return this.props.project.tech.map(item => {
+      console.log(item);
+      return <li>{item}</li>
+    })
   }
 
   render() {
@@ -54,13 +68,15 @@ class ProjectCard extends Component {
           onCancel={this.closeProjectModal}
           title={this.props.project.name}
           footer={null}
+          className="bigModal"
         >
         <div className="projectModal">
-          <div>
-            <p>{this.props.project.description} </p>
-            <a className="projectLink" href={this.props.project.githubRepo} >Github Repo</a>
+          <div className="projectText">
+            <p className="projectDesc">{this.props.project.description} </p>
+            <p>{this.findGithub()}</p>
             <a className="projectLink" href={this.props.project.deployedLink} >Deployed Site</a>
-            <p>Technology used: {this.props.project.tech} </p>
+            <p>Technology Used:</p>
+            <ul>{this.techUsed()} </ul>
           </div>
           <img className="projectImage" src={this.props.project.image} />
         </div>
