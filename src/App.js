@@ -17,6 +17,7 @@ const projects = [
       image: "/planetwager.png",
       tech: ["React", "AntDesign React Component Library", "Node.js", "Express", "PostgreSQL", "Knex.js", "Heroku"],
       thumbnail: "/planetWagerSquare.png",
+      display: "tall"
     },
     { id: 2,
       name: "SeekEasy",
@@ -26,6 +27,7 @@ const projects = [
       image: "/seekeasy.png",
       tech: ["JavaScript", "HTML", "CSS", "Express", "Node.js"],
       thumbnail: "/seekeasySquare-03.png",
+      display: "tall"
     },
     { id: 3,
       name: "Beer Boarding",
@@ -35,6 +37,7 @@ const projects = [
       image: "/beerboarding.png",
       tech: ["React", "AntDesign React Component Library", "Node.js", "Express", "PostgreSQL", "Knex.js", "Heroku", "Firebase"],
       thumbnail: "/beerBoardSquare.png",
+      display: "wide"
     },
     { id: 4,
       name: "Women's March Site",
@@ -44,6 +47,7 @@ const projects = [
       image: "/womensmarch.png",
       tech: ["Wix"],
       thumbnail: "/womensMarchSquare.png",
+      display: "wide"
     }
 ]
 
