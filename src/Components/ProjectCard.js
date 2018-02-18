@@ -55,13 +55,15 @@ class ProjectCard extends Component {
           title={this.props.project.name}
           footer={null}
         >
-        <h2>{this.props.project.name}</h2>
-        <p>{this.props.project.description} </p>
-        <a src={this.props.project.githubRepo} ></a>
-        <a src={this.props.project.deployedLink} ></a>
-        <p>Technology used: {this.props.project.tech} </p>
-        <img className="projectImage" src={this.props.project.image} />
-
+        <div className="projectModal">
+          <div>
+            <p>{this.props.project.description} </p>
+            <a className="projectLink" href={this.props.project.githubRepo} >Github Repo</a>
+            <a className="projectLink" href={this.props.project.deployedLink} >Deployed Site</a>
+            <p>Technology used: {this.props.project.tech} </p>
+          </div>
+          <img className="projectImage" src={this.props.project.image} />
+        </div>
         </Modal>
       </div>
     );

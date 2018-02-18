@@ -280,3 +280,16 @@ p {
 .projectImage {
   height: 8rem;
 }
+
+.projectLink {
+  color: rgb(44, 46, 236);
+}
+
+.projectLink:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.projectModal {
+  display: flex
+}
