@@ -101,7 +101,7 @@ class App extends Component {
             <a className="name" href="/">
                 <h1 className="App-title">Emily Pancake</h1>
             </a>
-            <h2 className="tagline" >Web Developer and Design Dork</h2>
+            <h2 className="tagline" >Web Developer and Design Enthusiast</h2>
             <div className={this.state.ghost}>
               <p className={this.state.typewriter}>{this.state.jokeText}</p>
             </div>

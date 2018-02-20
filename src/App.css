@@ -11,6 +11,8 @@ body {
   background-size: 100% 100%;
 }
 
+/*********** heading ************/
+
 @font-face {
 font-family: 'HighVoltage Rough';
 src: url('HighVoltage Rough.ttf') format('truetype');
@@ -79,11 +81,6 @@ p {
   animation: type2 6s steps(60, end);
 }
 
-p a{
-  color: white;
-  text-decoration: none;
-}
-
 span{
   animation: blink 1s infinite;
 }
@@ -102,13 +99,23 @@ span{
   display: none;
 }
 
-/*@keyframes blink{to{opacity: .0;}}*/
+/**************** nav ******************/
 
 .nav {
   display: flex;
   justify-content: flex-end;
 
 }
+
+p a{
+  color: white;
+  text-decoration: none;
+}
+
+/* a p::selection {
+  text-decoration: underline;
+  text-decoration-color: white
+} */
 
 .navitem {
   font-size: 1.5rem;
@@ -120,14 +127,9 @@ span{
   text-decoration-color: white
 }
 
-a {
+/* a {
   color: white
-}
-
-a p::selection {
-  text-decoration: underline;
-  text-decoration-color: white
-}
+} */
 
 .logobox {
   display: flex;
@@ -149,6 +151,8 @@ a p::selection {
 p {
   margin: 0
 }
+
+/************* Project Cards ***************/
 
 .card {
   background-color: rgb(97, 131, 93);
@@ -181,16 +185,14 @@ p {
   margin-bottom: 1rem;
 }
 
-.routes {
-  display: flex
-}
-
 .sectionTitle {
   text-align: center;
   color: rgb(97, 131, 93);
   margin: 2rem 0 0 0;
   font-size: 3rem
 }
+
+/************** About ****************/
 
 .about {
   background: white;
@@ -212,12 +214,17 @@ p {
   color: rgb(97, 131, 93);
 }
 
+
+/************** Resume ****************/
+
 .resume {
   background-color: white;
   display: flex;
   justify-content: space-around;
   padding: 2rem;
 }
+
+/************** Footer ****************/
 
 .footerContainer{
   background-color: rgb(31, 33, 33);
@@ -287,19 +294,10 @@ p {
 }
 
 .copy {
-  color: white;
-  margin: .3rem 0 .5rem 0;
-  justify-self: center;
-  padding: 0 3rem 0 3rem;
+  padding: 0 .75rem 0 0;
 }
 
-.projectImage {
-  height: 17rem;
-}
-
-.projectLink {
-  color: rgb(44, 46, 236);
-}
+/************* Project Modals ***************/
 
 .projectLink:hover {
   text-decoration: underline;
@@ -309,6 +307,19 @@ p {
 .projectModal {
   display: flex;
   justify-content: space-between
+}
+
+.projectLink {
+  color: rgb(44, 46, 236);
+}
+
+.projectDesc {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: .75rem;
+}
+
+.tall .projectImage {
+  height: 18rem;
 }
 
 .tall .projectText {
@@ -337,6 +348,16 @@ p {
   padding: 1rem 0 0 0;
 }
 
+.tall .imageAndTech {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem 0 1rem;
+}
+
+.wide .projectImage {
+  height: 15rem;
+}
+
 .wide .projectText {
   color: rgb(31, 33, 33);
   margin: 0 1rem 0 1rem;
@@ -351,12 +372,6 @@ p {
 .wide .imageAndTech {
   display: flex;
   justify-content: space-around;
-  margin: 0 1rem 0 1rem;
-}
-
-.tall .imageAndTech {
-  display: flex;
-  justify-content: space-between;
   margin: 0 1rem 0 1rem;
 }
 
@@ -389,9 +404,4 @@ ul {
 li span {
   position: relative;
   left: -5px;
-}
-
-.projectDesc {
-  color: rgba(0, 0, 0, 0.65);
-  font-size: .75rem;
 }
