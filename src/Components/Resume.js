@@ -5,7 +5,7 @@ export default function Resume() {
       <div>
         <h2 className="sectionTitle">Resume</h2>
         <div className="resume">
-          <img src="Pancake_Resume.png" width="800px" height="1100px" />
+          <img src="Pancake_Resume.png" width="800px" height="1100px" alt="resume"/>
         </div>
       </div>
     )

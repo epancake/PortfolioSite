@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import 'antd/dist/antd.css'
 import './App.css';
 import About from './Components/About.js'
@@ -80,7 +79,7 @@ class App extends Component {
         <div>
           <div className="header">
             <div className="logobox">
-              <img className="logo" src="/eplogo.png"/>
+              <img className="logo" src="/eplogo.png" alt="logo"/>
             </div>
             <nav className="nav">
               <a className="navitem" href="#projects">
@@ -106,17 +105,14 @@ class App extends Component {
               <p className={this.state.typewriter}>{this.state.jokeText}</p>
             </div>
           </header>
-          <a name="projects"></a>
-          <h2 className="sectionTitle">Projects</h2>
+          <a name="projects"><h2 className="sectionTitle">Projects</h2></a>
           <section className="projectList">
             <Projects projects={projects} key="2" />
           </section>
-          <a name="about"></a>
-          <About key="1"/>
-          <a name="resume"></a>
-          <Resume key="3"/>
-          <a name="contact"></a>
-          <Footer key="4"/>
+          <a name="about"><About key="1"/></a>
+          <a name="resume"><Resume key="3"/></a>
+          <a name="contact"><Footer key="4"/></a>
+          
         </div>
 
       </div>

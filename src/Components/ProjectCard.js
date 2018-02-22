@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Icon, Select, Modal } from 'antd';
+import { Icon, Modal } from 'antd';
 
 
 class ProjectCard extends Component {
@@ -70,7 +70,7 @@ class ProjectCard extends Component {
 
         <main onClick={this.openProjectModal} className="maincard">
           <h3 className="cardname">{this.props.project.name}</h3>
-          <img className="thumbnail" src={this.props.project.thumbnail}/>
+          <img className="thumbnail" src={this.props.project.thumbnail} alt={this.props.project.name + "thumbnail"}/>
         </main>
 
 
@@ -91,7 +91,7 @@ class ProjectCard extends Component {
             <div>{this.getLinks()}</div>
           </div>
           <div className="imageAndTech">
-            <img className="projectImage" src={this.props.project.image} />
+            <img className="projectImage" src={this.props.project.image} alt="screenshot"/>
             <aside className="tech">
               <h4>Technology:</h4>
               <ul className="techlist">{this.techUsed()}</ul>
