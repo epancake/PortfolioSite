@@ -198,6 +198,7 @@ p {
   background: white;
   color: rgb(97, 131, 93);
   text-align: center;
+  padding: 1rem 3rem;
 }
 
 .about p {

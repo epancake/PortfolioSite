@@ -38,8 +38,9 @@ class About extends Component {
     return (
       <div className="about">
           <h2 className="sectionTitle">About</h2>
-          <p>As a full stack web developer, I'm passionate about working on cross-functional teams to bring products to market. I'm happiest when I'm focused on the front-end, coding user eperiences that will have an impact on society by making people's lives better. My background in technical writing in the medical industry, coupled with my education in library and information science make me an asset to any team. I am currently seeking a position as a junior web developer on a team in Denver, Colorado.</p>
-          <p>My interests include my dog Pete Pancake, hot gossip about the wild growth of my hometown of Denver, state and local politics, Pokemon Go, Japanese culture, getting tough at the gym, traveling with my dear sweet husband, and cool sneakers.</p>
+          <p>As a full stack web developer, I'm passionate about working on cross-functional teams to bring products to market. I'm happiest when focused on the front-end, coding user eperiences that will have an impact. My background in technical writing for the medical industry, coupled with my education in library and information science make me an asset to any team.</p>
+          <p>My strengths lie in my organized approach to coding, my eye for design, and working with teams. As a technical writer, I worked with and negotiated content with stakeholders across the globe while managing a team. As a developer I can apply those communication and project management skills to everything I do. I am currently seeking a position as a web developer on a team in Denver, Colorado.</p>
+          <p>My interests include my dog Pete Pancake, news about the wild growth of my hometown of Denver, state and local politics, Pokemon Go, Japanese culture, traveling with my dear sweet husband, and cool sneakers.</p>
           <Button className="tldr-btn" onClick={this.openTldrModal}>TLDR for Developers</Button>
 
         <Modal
