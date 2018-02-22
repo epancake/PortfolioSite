@@ -37,6 +37,7 @@ h1 {
 h2 {
   font-size: 1.5rem;
   font-family: 'HighVoltage Rough';
+  cursor: auto;
 }
 
 h3 {
@@ -200,6 +201,7 @@ p {
   text-align: center;
   padding: 0 3rem 1rem 3rem;
   margin-top: 3rem;
+  cursor: auto;
 }
 
 .about p {
@@ -230,6 +232,7 @@ p {
   display: flex;
   justify-content: space-around;
   padding: 2rem;
+  cursor: auto;
 }
 
 /************** Footer ****************/
@@ -246,6 +249,7 @@ p {
   grid-template-rows: 33% 33% 10%;
   grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr;
   color: white;
+  cursor: auto;
 }
 
 .gridcol1 {

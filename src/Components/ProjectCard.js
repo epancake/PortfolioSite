@@ -51,12 +51,12 @@ class ProjectCard extends Component {
     if (this.props.project.githubRepo) {
       return (
         <div className="links">
-          <a className="projectLink" href={this.props.project.githubRepo} ><Icon type="github" /> Github Repo</a>
-          <a className="projectLink" href={this.props.project.deployedLink} ><Icon type="link" /> Deployed Site</a>
+          <a className="projectLink" href={this.props.project.githubRepo} target="_blank" rel="noopener noreferrer"><Icon type="github" /> Github Repo</a>
+          <a className="projectLink" href={this.props.project.deployedLink} target="_blank" rel="noopener noreferrer"><Icon type="link" /> Deployed Site</a>
         </div>
       )
     } else return (<div className="links">
-        <a className="projectLink" href={this.props.project.deployedLink} ><Icon type="link" /> Deployed Site</a>
+        <a className="projectLink" href={this.props.project.deployedLink} target="_blank" rel="noopener noreferrer"><Icon type="link" /> Deployed Site</a>
       </div>
     )
   }
