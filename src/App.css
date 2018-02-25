@@ -54,11 +54,10 @@ h3 {
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-family: 'Sue Ellen Francisco', cursive;
   color: rgb(97, 131, 93);
-  font-weight: bold;
-  margin: 1rem 0 0 0;
+  margin: .5rem 0 .5rem 0;
 }
 
 p {
@@ -155,24 +154,25 @@ p a{
   text-decoration: none;
 }
 
-/* a p::selection {
+a p::selection {
   text-decoration: underline;
   text-decoration-color: white
-} */
+}
 
 .navitem {
   font-size: 1.5rem;
   font-family: 'Sue Ellen Francisco', cursive;
   padding: 1rem 2rem 1rem 0;
+  color: transparent;
 }
 .navitem:hover {
   text-decoration: underline;
   text-decoration-color: white
 }
 
-/* a {
-  color: white
-} */
+.navitem p::selection {
+  background-color: none;
+}
 
 .logobox {
   display: flex;
@@ -218,7 +218,6 @@ p {
 
 .projectList {
   display: flex;
-  margin-top: 2rem;
 }
 
 .card:hover {
@@ -259,11 +258,17 @@ p {
 
 .about p {
   padding: 1rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.about ul {
+  font-family: 'Nunito', sans-serif;
 }
 
 .tldr-btn, .download {
   margin-bottom: .5rem;
-  box-shadow: 1px 1px 10px grey
+  box-shadow: 1px 1px 10px grey;
+  font-family: 'Nunito', sans-serif;
 }
 
 .ant-btn:hover {
@@ -367,6 +372,7 @@ p {
   align-self: left;
   color: white;
   margin: .5rem 0 .5rem 0;
+  font-family: 'Nunito', sans-serif;
 }
 
 .copy {
@@ -387,11 +393,13 @@ p {
 
 .projectLink {
   color: rgb(44, 46, 236);
+  font-family: 'Nunito', sans-serif;
 }
 
 .projectDesc {
   color: rgba(0, 0, 0, 0.65);
   font-size: .75rem;
+  font-family: 'Nunito', sans-serif;
 }
 
 .tall .projectImage {
@@ -401,6 +409,7 @@ p {
 .tall .projectText {
   width: 15rem;
   color: rgb(31, 33, 33);
+  font-family: 'Nunito', sans-serif;
 }
 
 .tall {
@@ -410,6 +419,7 @@ p {
 
 .tall .tech {
   margin-left: 2rem;
+  font-family: 'Nunito', sans-serif;
 }
 
 .tall .links {
@@ -418,6 +428,7 @@ p {
   justify-content: space-around;
   text-align: center;
   padding: 1rem 0 2rem 0;
+  font-family: 'Nunito', sans-serif;
 }
 
 .tall .links a {
@@ -437,12 +448,14 @@ p {
 .wide .projectText {
   color: rgb(31, 33, 33);
   margin: 0 1rem 0 1rem;
+  font-family: 'Nunito', sans-serif;
 }
 
 .wide .links {
   display: flex;
   justify-content: space-around;
   margin: .5rem 0 1rem 0;
+  font-family: 'Nunito', sans-serif;
 }
 
 .wide .imageAndTech {
@@ -453,6 +466,7 @@ p {
 
 .wide .tech {
   margin: 0 0 0 1rem;
+  font-family: 'Nunito', sans-serif;
 }
 
 .ant-modal-content{

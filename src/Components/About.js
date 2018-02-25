@@ -40,7 +40,7 @@ class About extends Component {
           <p>As a full stack web developer, I'm passionate about working on cross-functional teams to bring products to market. I'm happiest when focused on the front-end, coding user eperiences that will have an impact. My background in technical writing for the medical industry, coupled with my education in library and information science make me an asset to any team.</p>
           <ul className="strengths">
             <li><strong>My strengths:</strong> I have an organized approach to coding, an eye for design, and demonstrated success working with teams.</li>
-            <li><strong>Most successful project:</strong> As a technical writer, I worked with stakeholders across the globe to negotiate content and innovate deliverables that exceeded internal and customer expectations across cultures. As a developer I can apply those communication and project innovation skills to everything I do.</li>
+            <li><strong>Most successful project:</strong> In 2017, as a technical writer I worked with stakeholders across the globe to negotiate content and innovate deliverables for a medical device operators manual. The final deliverable exceeded internal and customer expectations across cultures, and was approved by national regulatory bodies. As a developer I can apply those communication and project innovation skills to everything I do.</li>
             <li><strong>Currently:</strong> Seeking a position as a web developer on a team in Denver, Colorado.</li>
           </ul>
           <p>My interests include my dog Pete Pancake, news about the wild growth of my hometown of Denver, state and local politics, Pokémon Go, Japanese culture, traveling with my dear sweet husband, and cool sneakers.</p>
