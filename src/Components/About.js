@@ -17,7 +17,6 @@ class About extends Component {
   }
 
   componentDidMount () {
-    console.log("props", this.props)
   }
 
   toggleFunction = () => {

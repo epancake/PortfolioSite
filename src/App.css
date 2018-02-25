@@ -2,77 +2,84 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background:
-  linear-gradient(
-  rgba(0, 0, 0, 0.7),
-  rgba(0, 0, 0, 0.7)
-  ),
-    url('/brick.jpg') no-repeat fixed center;
   background-size: 100% 100%;
+  background:
+    url('/paper.jpg') no-repeat fixed center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /*********** heading ************/
 
-@font-face {
-font-family: 'HighVoltage Rough';
-src: url('HighVoltage Rough.ttf') format('truetype');
-}
-
 .heading {
   display: grid;
-  grid-template-columns: 5% 85% 10%;
+  grid-template-columns: 20% 60% 20%;
+  justify-items: center;
 }
 
 h1 {
   font-size: 5rem;
-  font-family: 'HighVoltage Rough';
-  margin-bottom: 0;
-  text-decoration: underline;
+  font-family: 'Sue Ellen Francisco', cursive;
+  margin: 1rem 0;
+  color: rgb(97, 131, 93);
+  grid-column: 2 / 3;
+  justify-self: center;
+  grid-row: 1 / 2;
+  text-align: center;
 }
 
 .tagline {
-  margin-top: -1rem
+  margin: 2rem 0 1rem 0;
+  padding: 0 0 0 0;
+  color: rgb(97, 131, 93);
+  grid-row: 2/3
 }
 
 h2 {
-  font-size: 1.5rem;
-  font-family: 'HighVoltage Rough';
+  font-size: 2rem;
+  font-family: 'Sue Ellen Francisco', cursive;
   cursor: auto;
+  padding: 1rem 0 1rem 0;
+  font-weight: bold;
+  text-align: center;
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
-  font-family: 'HighVoltage Rough';
+  font-family: 'Sue Ellen Francisco', cursive;
   color: white;
-
 }
 
 h4 {
   font-size: 1rem;
-  font-family: 'HighVoltage Rough';
+  font-family: 'Sue Ellen Francisco', cursive;
   color: rgb(97, 131, 93);
   font-weight: bold;
-  margin: 0;
+  margin: 1rem 0 0 0;
 }
 
 p {
   color: rgb(97, 131, 93);
 }
 
-.name, h1, h2, .heading div, .svg {
+.name, h2, .heading div, .svg {
   color: #fff;
   grid-column-start: 2;
-  justify-self: start;
+  justify-self: center;
 }
 
 .typewriter{
-  color: white;
+  color: rgb(97, 131, 93);
   font-family: "Courier";
   font-size: 20px;
   white-space: nowrap;
   overflow: hidden;
-  width: 30em;
+  width: 40rem;
+  text-align: center;
+  grid-row: 3 / 4;
   animation:
     type 3s steps(40, end),
     blink-caret .75s step-end 10s;
@@ -100,6 +107,41 @@ span{
   display: none;
 }
 
+.ant-btn-circle {
+  background-color: transparent;
+  height: 5rem;
+  width: 5rem;
+  margin-top: 2rem;
+}
+
+.ant-btn-circle:hover {
+  background-color: transparent;
+  border: 1px solid rgb(97, 131, 93);
+}
+
+.ant-btn:focus {
+  background-color: transparent;
+  color: rgb(97, 131, 93);
+  border: none;
+
+}
+
+.ant-btn {
+  color: rgb(97, 131, 93);
+}
+
+.anticon {
+  font-size: 1rem;
+}
+
+.arrowDown {
+  grid-column: 2 / 3;
+}
+
+.ghost {
+  grid-row: 3 / 4
+}
+
 /**************** nav ******************/
 
 .nav {
@@ -120,7 +162,7 @@ p a{
 
 .navitem {
   font-size: 1.5rem;
-  font-family: 'HighVoltage Rough';
+  font-family: 'Sue Ellen Francisco', cursive;
   padding: 1rem 2rem 1rem 0;
 }
 .navitem:hover {
@@ -146,7 +188,13 @@ p a{
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(31, 33, 33)
+  background-color: rgb(31, 33, 33);
+  height: 12.5vh;
+  text-align: center;
+}
+
+header {
+  height: 87.5vh
 }
 
 p {
@@ -167,6 +215,8 @@ p {
   flex-direction: column;
   align-items: center
 }
+
+
 
 .projectList {
   display: flex
@@ -189,7 +239,7 @@ p {
 .sectionTitle {
   text-align: center;
   color: rgb(97, 131, 93);
-  margin: 2rem 0 0 0;
+  margin: 1.5rem 0 0 0;
   font-size: 3rem
 }
 
@@ -208,7 +258,7 @@ p {
   padding: 1rem;
 }
 
-.tldr-btn {
+.tldr-btn, .download {
   margin-bottom: .5rem;
   box-shadow: 1px 1px 10px grey
 }
@@ -230,9 +280,20 @@ p {
 .resume {
   background-color: white;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-around;
   padding: 2rem;
   cursor: auto;
+  text-align: center;
+}
+
+.resume-png {
+  width: 90vh
+}
+
+.download {
+  margin-top: 2rem;
 }
 
 /************** Footer ****************/
@@ -403,7 +464,7 @@ p {
 .ant-modal-title{
   color: rgb(97, 131, 93);
   font-size: 1.8rem;
-  font-family: 'HighVoltage Rough';
+  font-family: 'Sue Ellen Francisco', cursive;
 }
 
 .techlist {
@@ -416,4 +477,13 @@ p {
 li span {
   position: relative;
   left: -5px;
+}
+
+.ant-modal-content {
+  margin-left: 0rem;
+  margin-top: -3rem;
+}
+
+.anticon-down {
+  font-size: 2rem;
 }

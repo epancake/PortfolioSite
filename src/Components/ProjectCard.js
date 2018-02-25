@@ -20,7 +20,6 @@ class ProjectCard extends Component {
   }
 
   componentDidMount () {
-    console.log("props", this.props)
   }
 
   toggleFunction = () => {

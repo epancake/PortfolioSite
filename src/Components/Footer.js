@@ -12,11 +12,11 @@ export default function Footer() {
         <img className="icon gridcol5 gridrow1" src="/icons/phone.png" alt="phone icon"/>
         <p className="ftext gridcol6 gridrow1">720-295-4496</p>
         <img className="icon gridcol1 gridrow2" src="/icons/linkedin.png" alt="linkedin icon"/>
-        <a href="https://www.linkedin.com/in/emilypancake/" target="_blank" rel="noopener noreferrer"><p className="ftext gridcol2 gridrow2">/in/emilypancake</p></a>
+        <p className="ftext gridcol2 gridrow2"><a href="https://www.linkedin.com/in/emilypancake/" target="_blank" rel="noopener noreferrer">/in/emilypancake</a></p>
         <p className="icon copy gridcol3 gridrow2">&copy;</p>
         <p className="ftext gridcol4 gridrow2">2018, Emily Pancake</p>
         <img className="icon gridcol5 gridrow2" src="/icons/github.png" alt="github icon"/>
-        <a href="https://github.com/epancake" target="_blank" rel="noopener noreferrer"><p className="ftext gridcol6 gridrow2">/epancake</p></a>
+        <a className="ftext gridcol6 gridrow2" href="https://github.com/epancake" target="_blank" rel="noopener noreferrer">/epancake</a>
         
       </div>
       </div>

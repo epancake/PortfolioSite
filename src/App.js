@@ -5,8 +5,9 @@ import About from './Components/About.js'
 import Projects from './Components/Projects.js'
 import Resume from './Components/Resume.js'
 import Footer from './Components/Footer.js'
-
-
+import { Button } from 'antd'
+import ScrollableAnchor from 'react-scrollable-anchor'
+ 
 
 const projects = [
     { id: 1,
@@ -59,7 +60,7 @@ class App extends Component {
     this.state = {
       jokeText: "",
       typewriter: "joke",
-      ghost: ""
+      ghost: "ghost"
     }
 
   }
@@ -68,7 +69,7 @@ class App extends Component {
     setTimeout(()=>
     { this.setState({jokeText: "and yes... that's really my last name.", typewriter: "typewriter joke"})}, 3000);
     setTimeout(()=>
-    { this.setState({ghost: "hidden"})}, 8000);
+    { this.setState({ghost: "ghost hidden"})}, 8000);
   }
 
 
@@ -104,14 +105,19 @@ class App extends Component {
             <div className={this.state.ghost}>
               <p className={this.state.typewriter}>{this.state.jokeText}</p>
             </div>
+            <a className="arrowDown" href="#projects" rel="noopener noreferrer"><Button shape="circle" icon="down" /></a>
+          <ScrollableAnchor id={'projects'}>
+          <h2 className="sectionTitle">Projects</h2>
+          </ScrollableAnchor>
           </header>
-          <a name="projects"><h2 className="sectionTitle">Projects</h2></a>
           <section className="projectList">
             <Projects projects={projects} key="2" />
           </section>
-          <a name="about"><About key="1"/></a>
-          <a name="resume"><Resume key="3"/></a>
-          <a name="contact"><Footer key="4"/></a>
+          <ScrollableAnchor id={"about"} name="about"><About key="1"/></ScrollableAnchor>
+          <a name="resume"></a>
+          <Resume key="3"/>
+          <a name="contact"></a>
+          <Footer key="4"/>
           
         </div>
 
