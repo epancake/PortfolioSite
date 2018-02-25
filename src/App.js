@@ -107,7 +107,7 @@ class App extends Component {
             </div>
             <a className="arrowDown" href="#projects" rel="noopener noreferrer"><Button shape="circle" icon="down" /></a>
           <ScrollableAnchor id={'projects'}>
-          <h2 className="sectionTitle">Projects</h2>
+          <h2 className="sectionTitle notop">Projects</h2>
           </ScrollableAnchor>
           </header>
           <section className="projectList">

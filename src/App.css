@@ -213,13 +213,12 @@ p {
 .maincard {
   display: flex;
   flex-direction: column;
-  align-items: center
+  align-items: center;
 }
 
-
-
 .projectList {
-  display: flex
+  display: flex;
+  margin-top: 2rem;
 }
 
 .card:hover {
@@ -243,6 +242,10 @@ p {
   font-size: 3rem
 }
 
+.notop {
+  margin-top: 0;
+  padding-top: 0;
+}
 /************** About ****************/
 
 .about {
@@ -289,7 +292,7 @@ p {
 }
 
 .resume-png {
-  width: 90vh
+  width: 85vw;
 }
 
 .download {
@@ -477,11 +480,6 @@ p {
 li span {
   position: relative;
   left: -5px;
-}
-
-.ant-modal-content {
-  margin-left: 0rem;
-  margin-top: -3rem;
 }
 
 .anticon-down {
