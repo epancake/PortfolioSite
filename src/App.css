@@ -103,7 +103,7 @@ span{
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
 }
 
 .ant-btn-circle {
