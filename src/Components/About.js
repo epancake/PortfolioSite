@@ -37,7 +37,7 @@ class About extends Component {
     return (
       <div className="about">
           <h2 className="sectionTitle">About</h2>
-          <p>As a full stack web developer, I'm passionate about working on cross-functional teams to bring products to market. I'm happiest when focused on the front-end, coding user eperiences that will have an impact. My background in technical writing for the medical industry, coupled with my education in library and information science make me an asset to any team.</p>
+          <p>As a full stack web developer, I'm passionate about working on cross-functional teams to bring products to market. I'm happiest when focused on the front-end, coding user experiences that will have an impact. My background in technical writing for the medical industry, coupled with my education in library and information science make me an asset to any team.</p>
           <ul className="strengths">
             <li><strong>My strengths:</strong> I have an organized approach to coding, an eye for design, and demonstrated success working with teams.</li>
             <li><strong>Most successful project:</strong> In 2017, as a technical writer I worked with stakeholders across the globe to negotiate content and innovate deliverables for a medical device operators manual. The final deliverable exceeded internal and customer expectations across cultures, and was approved by national regulatory bodies. As a developer I can apply those communication and project innovation skills to everything I do.</li>
@@ -54,7 +54,7 @@ class About extends Component {
           onCancel={this.closeTldrModal}
           footer={null}
         >
-        <pre><code class="html">
+        <pre><code className="html">
           me = {"{"}<br/>
           {"   "}name: "Emily Pancake", <br/>
           {"   "}fullStackDev: true, <br/>

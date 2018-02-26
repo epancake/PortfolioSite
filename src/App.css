@@ -11,6 +11,10 @@ body {
   background-size: cover;
 }
 
+#root {
+  width: 100vw;
+}
+
 /*********** heading ************/
 
 .heading {
@@ -103,7 +107,7 @@ span{
 }
 
 .hidden {
-  visibility: hidden;
+  display: none;
 }
 
 .ant-btn-circle {
@@ -140,6 +144,8 @@ span{
 .ghost {
   grid-row: 3 / 4
 }
+
+
 
 /**************** nav ******************/
 
@@ -191,6 +197,7 @@ a p::selection {
   background-color: rgb(31, 33, 33);
   height: 12.5vh;
   text-align: center;
+  width: 100%
 }
 
 header {
@@ -244,6 +251,7 @@ p {
 .notop {
   margin-top: 0;
   padding-top: 0;
+  margin-bottom: 1rem;
 }
 /************** About ****************/
 
@@ -321,46 +329,6 @@ p {
   cursor: auto;
 }
 
-.gridcol1 {
-  grid-column-start: 1
-}
-
-.gridcol2 {
-  grid-column-start: 2
-}
-
-.gridcol3 {
-  grid-column-start: 3
-}
-
-.gridcol4 {
-  grid-column-start: 4
-}
-
-.gridcol5 {
-  grid-column-start: 5
-}
-
-.gridcol6 {
-  grid-column-start: 6
-}
-
-.gridrow1 {
-  grid-row-start: 1
-}
-
-.gridrow2 {
-  grid-row-start: 2
-}
-
-.gridrow3 {
-  grid-row-start: 3
-}
-
-.gridcol34 {
-  grid-column: 3 / 5
-}
-
 .icon {
   height: 1.25rem;
   justify-self: end;
@@ -394,6 +362,7 @@ p {
 .projectLink {
   color: rgb(44, 46, 236);
   font-family: 'Nunito', sans-serif;
+  padding: .5rem;
 }
 
 .projectDesc {
@@ -498,4 +467,109 @@ li span {
 
 .anticon-down {
   font-size: 2rem;
+}
+
+@media screen and (max-width: 520px) {
+  .name {
+    grid-column: 1 / 4
+  }
+
+  .tagline {
+    grid-column: 1 / 4;
+    margin: 0
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .navitem {
+    font-size: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    color: transparent;
+  }
+
+  .typewriter{
+    color: rgb(97, 131, 93);
+    font-family: "Courier";
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    grid-row: 3 / 4;
+    animation:
+      type 3s steps(40, end),
+      blink-caret .75s step-end 10s;
+  }
+
+  .projectList {
+    flex-wrap: wrap
+  }
+
+  .card {
+    width: 50vw;
+  }
+
+  .ant-button-circle {
+    width: 4rem;
+    height: 4rem;
+    margin: 0;
+  }
+
+  .footer {
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 15% 15% 15% 15% 15% 15%;
+  }
+
+  .copyright-icon {
+    grid-row: 6
+  }
+
+  .copyright-text {
+    grid-row: 6
+  }
+
+  .about {
+    padding: 0 1rem 1rem 1rem;
+  }
+
+  .ant-modal {
+    width: 100px;
+    overflow: 'scroll'
+  }
+
+  /* .ant-modal-body {
+    width: 40%;
+  } */
+
+  .ant-modal-content{
+     margin-left: 0rem;
+     margin-top: 0rem;
+  }
+
+  .wide .projectImage {
+    height: 10rem;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projectLink {
+    align-self: center;
+  }
+
+  .wide .imageAndTech {
+    flex-direction: column;
+  }
+
+  .projectDesc {
+    width: 45vh;
+    text-align: center;
+  }
+
+  .tall {
+    flex-direction: column;
+  }
 }

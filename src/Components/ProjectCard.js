@@ -87,7 +87,7 @@ class ProjectCard extends Component {
           <div className="projectText">
             <h4>Description:</h4>
             <p className="projectDesc">{this.props.project.description} </p>
-            <div>{this.getLinks()}</div>
+            <div className="links">{this.getLinks()}</div>
           </div>
           <div className="imageAndTech">
             <img className="projectImage" src={this.props.project.image} alt="screenshot"/>
