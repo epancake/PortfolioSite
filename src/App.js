@@ -30,16 +30,16 @@ const projects = [
       thumbnail: "/tippingSquare.png",
       display: "wide"
     },
-    // { id: 3,
-    //   name: "SeekEasy",
-    //   description: "A happy hour locator for my Denver neighborhood, Baker. Users can search for happy hours by day of the week, and add new happy hours to the dataset.",
-    //   githubRepo: "https://github.com/epancake/SeekEasy",
-    //   deployedLink: "https://seekeasybaker.firebaseapp.com",
-    //   image: "/seekeasy.png",
-    //   tech: ["JavaScript", "HTML", "CSS", "Express", "Node.js"],
-    //   thumbnail: "/seekeasySquare-03.png",
-    //   display: "tall"
-    // },
+    { id: 3,
+      name: "SeekEasy",
+      description: "A happy hour locator for my Denver neighborhood, Baker. Users can search for happy hours by day of the week, and add new happy hours to the dataset.",
+      githubRepo: "https://github.com/epancake/SeekEasy",
+      deployedLink: "https://seekeasybaker.firebaseapp.com",
+      image: "/seekeasy.png",
+      tech: ["JavaScript", "HTML", "CSS", "Express", "Node.js"],
+      thumbnail: "/seekeasySquare-03.png",
+      display: "tall"
+    },
     { id: 4,
       name: "Beer Boarding",
       description: "As co-chair of a meetup at Galvanize called Beer-Boarding, I identified a need to organize and track JavaScript white boarding questions. I created this full-stack application to empower students and champions to practice white boarding skills. More details are available on the Github Repo Readme.",
@@ -117,18 +117,23 @@ class App extends Component {
             </div>
             <a className="arrowDown" href="#projects" rel="noopener noreferrer"><Button shape="circle" icon="down" /></a>
           <ScrollableAnchor id={'projects'}>
-          <h2 className="sectionTitle notop">Projects</h2>
+            <h2 className="sectionTitle notop">Projects</h2>
           </ScrollableAnchor>
           </header>
           <section className="projectList">
             <Projects projects={projects} key="2" />
           </section>
-          <ScrollableAnchor id={"about"} name="about"><About key="1"/></ScrollableAnchor>
-          <a name="resume"></a>
-          <Resume key="3"/>
-          <a name="contact"></a>
-          <Footer key="4"/>
-          
+          <ScrollableAnchor id={"about"} name="about">
+            <About key="1"/>
+          </ScrollableAnchor>
+          <ScrollableAnchor id={"resume"} name="resume">
+            <h2 className="placeholder-for-scroll"></h2>
+          </ScrollableAnchor>
+            <Resume key="3"/>
+          <ScrollableAnchor id={"contact"} name="contact">
+            <h2 className="placeholder-for-scroll"></h2>
+          </ScrollableAnchor>   
+            <Footer key="4"/> 
         </div>
 
       </div>
