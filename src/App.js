@@ -7,7 +7,7 @@ import Resume from './Components/Resume.js'
 import Footer from './Components/Footer.js'
 import { Button } from 'antd'
 import ScrollableAnchor from 'react-scrollable-anchor'
- 
+
 
 const projects = [
     { id: 1,
@@ -87,7 +87,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div>
+        <div id="background">
           <div className="header">
             <div className="logobox">
               <img className="logo" src="/eplogo.png" alt="logo"/>
@@ -132,8 +132,8 @@ class App extends Component {
             <Resume key="3"/>
           <ScrollableAnchor id={"contact"} name="contact">
             <h2 className="placeholder-for-scroll"></h2>
-          </ScrollableAnchor>   
-            <Footer key="4"/> 
+          </ScrollableAnchor>
+            <Footer key="4"/>
         </div>
 
       </div>

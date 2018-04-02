@@ -17,8 +17,6 @@ A site about me, for potential employers with four sections:
 ## Installation Instructions
 If you wish to download and clone the site, please do the following in your command line:
 ```npm install```
-```npm install antd```
-```npm install highlight.js```
 
 
 ## Technologies
