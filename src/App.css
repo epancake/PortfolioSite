@@ -238,6 +238,7 @@ p {
 
 .projectList {
   display: flex;
+  flex-wrap: wrap
 }
 
 .card:hover {
@@ -252,6 +253,7 @@ p {
 .thumbnail {
   width: 75%;
   margin-bottom: 1rem;
+  border: 1px solid rgb(242, 242, 219);
 }
 
 .sectionTitle {
@@ -585,4 +587,18 @@ li span {
   .tall {
     flex-direction: column;
   }
+}
+
+.bm-burger-bars {
+  color: white;
+  width: 20px;
+  opacity: 0;
+}
+
+.bm-burger-button {
+  width: 10px
+}
+
+.doubleCheeseburger {
+  width: 20px
 }
