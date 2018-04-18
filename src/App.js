@@ -96,11 +96,7 @@ class App extends Component {
   event.preventDefault();
   }
 
-  openMenu = () => {
-    this.setState({menuOpen: !this.state.menuOpen})
-  }
-
-  closeMenu = () => {
+  toggleMenu = () => {
     this.setState({menuOpen: !this.state.menuOpen})
   }
 
@@ -116,7 +112,7 @@ class App extends Component {
             </div>
 
             <nav className="nav">
-              <div className="hamburger" onClick={this.openMenu}>
+              <div className="hamburger" onClick={this.toggleMenu}>
                 <div className="burger topBurger"></div>
                 <div className="burger midBurger"></div>
                 <div className="burger lowBurger"></div>
@@ -178,7 +174,7 @@ class App extends Component {
                 <p className="burgernavtitle">Contact</p>
               </a>
           </nav>
-          <a href="#" class="close" onClick={this.closeMenu}></a>
+          <a href="#" class="close" onClick={this.toggleMenu}></a>
         </div>
       </div>
     );
