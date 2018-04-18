@@ -79,7 +79,8 @@ class App extends Component {
     this.state = {
       jokeText: "",
       typewriter: "joke",
-      ghost: "ghost"
+      ghost: "ghost",
+      menuOpen: false
     }
 
   }
@@ -95,6 +96,14 @@ class App extends Component {
   event.preventDefault();
   }
 
+  openMenu = () => {
+    this.setState({menuOpen: !this.state.menuOpen})
+  }
+
+  closeMenu = () => {
+    this.setState({menuOpen: !this.state.menuOpen})
+  }
+
 
   render() {
 
@@ -107,6 +116,11 @@ class App extends Component {
             </div>
 
             <nav className="nav">
+              <div className="hamburger" onClick={this.openMenu}>
+                <div className="burger topBurger"></div>
+                <div className="burger midBurger"></div>
+                <div className="burger lowBurger"></div>
+              </div>
               <a className="navitem" href="#projects">
                 <p>Projects</p>
               </a>
@@ -149,7 +163,23 @@ class App extends Component {
           </ScrollableAnchor>
             <Footer key="4"/>
         </div>
-
+        <div className={this.state.menuOpen ? "burgerMenu" : "burgerMenu hidden"}>
+          <nav>
+             <a className="burgernavitem" href="#projects" onClick={this.closeMenu}>
+                <p className="burgernavtitle">Projects</p>
+              </a>
+              <a className="burgernavitem" href="#about" onClick={this.closeMenu}>
+                <p className="burgernavtitle">About</p>
+              </a>
+              <a className="burgernavitem" href="#resume" onClick={this.closeMenu}>
+                <p className="burgernavtitle">Resume</p>
+              </a>
+              <a className="burgernavitem" href="#contact" onClick={this.closeMenu}>
+                <p className="burgernavtitle">Contact</p>
+              </a>
+          </nav>
+          <a href="#" class="close" onClick={this.closeMenu}></a>
+        </div>
       </div>
     );
   }

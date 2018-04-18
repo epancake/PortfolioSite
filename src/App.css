@@ -28,6 +28,12 @@ body {
   width: 100vw;
 }
 
+.App {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100vw
+}
+
 /*********** heading ************/
 
 .heading {
@@ -103,6 +109,13 @@ p {
 
 .joke:nth-child(2){
   animation: type2 6s steps(60, end);
+}
+
+.burger {
+  background-color: rgb(97, 131, 93);
+  height: .25rem;
+  width: 1.5rem;
+  margin: .35rem 1rem;
 }
 
 span{
@@ -210,7 +223,6 @@ a p::selection {
   background-color: rgb(31, 33, 33);
   height: 12.5vh;
   text-align: center;
-  width: 100%
 }
 
 header {
@@ -360,6 +372,20 @@ p {
 
 .copy {
   padding: 0 .75rem 0 0;
+}
+
+.hamburger {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 520px) {
+  .hamburger {
+    visibility: visible;
+  }
+
+  .navitem {
+    display: none;
+  }
 }
 
 /************* Project Modals ***************/
@@ -589,16 +615,61 @@ li span {
   }
 }
 
-.bm-burger-bars {
-  color: white;
-  width: 20px;
-  opacity: 0;
+.burgerMenu {
+  background-color: rgb(31, 33, 33);
+  z-index: 1;
+  margin-left: -10rem
 }
 
-.bm-burger-button {
-  width: 10px
+.background {
+  z-index: -1
 }
 
-.doubleCheeseburger {
-  width: 20px
+.burgernavitem {
+  font-size: 1.5rem;
+  font-family: 'Sue Ellen Francisco', cursive;
+  padding: 0 0 0 .25rem;
+  color: transparent;
 }
+
+.burgernavitem:hover {
+  text-decoration: underline;
+  text-decoration-color: white
+}
+
+.burgernavitem p::selection {
+  background-color: none;
+}
+
+.burgernavtitle {
+  padding-left: 1rem;
+}
+
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #fff;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+
+
