@@ -161,16 +161,16 @@ class App extends Component {
         </div>
         <div className={this.state.menuOpen ? "burgerMenu" : "burgerMenu hidden"}>
           <nav>
-             <a className="burgernavitem" href="#projects" onClick={this.closeMenu}>
+             <a className="burgernavitem" href="#projects" onClick={this.toggleMenu}>
                 <p className="burgernavtitle">Projects</p>
               </a>
-              <a className="burgernavitem" href="#about" onClick={this.closeMenu}>
+              <a className="burgernavitem" href="#about" onClick={this.toggleMenu}>
                 <p className="burgernavtitle">About</p>
               </a>
-              <a className="burgernavitem" href="#resume" onClick={this.closeMenu}>
+              <a className="burgernavitem" href="#resume" onClick={this.toggleMenu}>
                 <p className="burgernavtitle">Resume</p>
               </a>
-              <a className="burgernavitem" href="#contact" onClick={this.closeMenu}>
+              <a className="burgernavitem" href="#contact" onClick={this.toggleMenu}>
                 <p className="burgernavtitle">Contact</p>
               </a>
           </nav>
