@@ -618,7 +618,17 @@ li span {
 .burgerMenu {
   background-color: rgb(31, 33, 33);
   z-index: 1;
-  margin-left: -10rem
+  margin-left: -10rem;
+  animation: menuSlideIn 1s ease-in-out 0s 1
+}
+
+@keyframes menuSlideIn {
+  0% {
+    margin-left: 0
+  }
+  100% {
+    margin-left: -10rem
+  }
 }
 
 .background {
@@ -628,7 +638,7 @@ li span {
 .burgernavitem {
   font-size: 1.5rem;
   font-family: 'Sue Ellen Francisco', cursive;
-  padding: 0 0 0 .25rem;
+  padding: 0 0 0 0;
   color: transparent;
 }
 
@@ -643,16 +653,27 @@ li span {
 
 .burgernavtitle {
   padding-left: 1rem;
+  padding-top: 1.4rem;
 }
 
 .close {
   position: absolute;
-  right: 32px;
-  top: 32px;
+  right: 10px;
+  top: 20px;
   width: 32px;
   height: 32px;
-  opacity: 0.3;
+  animation: xFadeIn 2s ease-in-out 0s 1
 }
+
+@keyframes xFadeIn {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+
 .close:hover {
   opacity: 1;
 }
@@ -661,8 +682,8 @@ li span {
   left: 15px;
   content: ' ';
   height: 33px;
-  width: 2px;
-  background-color: #fff;
+  width: 4px;
+  background-color: rgb(97, 131, 93);
 }
 .close:before {
   transform: rotate(45deg);
