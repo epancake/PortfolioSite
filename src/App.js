@@ -174,7 +174,7 @@ class App extends Component {
                 <p className="burgernavtitle">Contact</p>
               </a>
           </nav>
-          <a href="#" class="close" onClick={this.toggleMenu}></a>
+          <a href="#" className="close" onClick={this.toggleMenu}></a>
         </div>
       </div>
     );

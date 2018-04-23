@@ -129,7 +129,7 @@ span{
 @keyframes type2{
   0%{width: 0;}
   50%{width: 0;}
-  100%{ width: 100; }
+  100%{ width: 0; }
 }
 
 .hidden {
@@ -538,6 +538,7 @@ li span {
     overflow: hidden;
     text-align: center;
     grid-row: 3 / 4;
+    width: auto;
     animation:
       type 3s steps(40, end),
       blink-caret .75s step-end 10s;
