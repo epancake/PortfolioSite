@@ -274,7 +274,7 @@ p {
 
 .maincard:hover .content {
   bottom: 0%;
-  height: 77%;  
+  height: 100%;  
 }
 
 .shortDescription {
