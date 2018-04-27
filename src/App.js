@@ -17,7 +17,9 @@ const projects = [
       image: "/travelSquadFull.png",
       tech: ["React", "Node.js", "Express", "PostgreSQL", "Socket.io", "Nodemailer", "Knex.js", "Heroku"],
       thumbnail: "/travelsquad.png",
-      display: "wide"
+      display: "wide",
+      slider: "A full stack React app, for group travel. Webscraper, chat, and email features.",
+      slider2: "Galvanize Capstone project."
     },
     { id: 2,
       name: "Planet Wager",
@@ -27,7 +29,9 @@ const projects = [
       image: "/planetwager.png",
       tech: ["React", "AntDesign", "Node.js", "Express", "PostgreSQL", "Knex.js", "Heroku"],
       thumbnail: "/planetWagerSquare.png",
-      display: "tall"
+      display: "tall",
+      slider: "A full stack React app, for friendly wagers.",
+      slider2: "Group project."
     },
     { id: 3,
       name: "The Tipping Point",
@@ -37,17 +41,9 @@ const projects = [
       image: "/tippingPoint.png",
       tech: ["JavaScript", "d3.js", "Leaflet", "CSS"],
       thumbnail: "/tippingSquare.png",
-      display: "wide"
-    },
-    { id: 4,
-      name: "SeekEasy",
-      description: "A happy hour locator for my Denver neighborhood, Baker. Users can search for happy hours by day of the week, and add new happy hours to the dataset.",
-      githubRepo: "https://github.com/epancake/SeekEasy",
-      deployedLink: "https://seekeasybaker.firebaseapp.com",
-      image: "/seekeasy.png",
-      tech: ["JavaScript", "HTML", "CSS", "Express", "Node.js"],
-      thumbnail: "/seekeasySquare-03.png",
-      display: "tall"
+      display: "wide",
+      slider: "A d3.js data visualizations look at guns in Australia and the US.",
+      slider2: "Group project."
     },
     { id: 5,
       name: "Beer Boarding",
@@ -57,7 +53,9 @@ const projects = [
       image: "/beerboarding.png",
       tech: ["React", "AntDesign", "Node.js", "Express", "PostgreSQL", "Knex.js", "Heroku", "Firebase"],
       thumbnail: "/beerBoardSquare.png",
-      display: "wide"
+      display: "wide",
+      slider: "A full stack React app made with the AntDesign Library to support my weekly JavaScript meetup.",
+      slider2: "Solo project."
     },
     { id: 6,
       name: "Women's March Site",
@@ -67,7 +65,9 @@ const projects = [
       image: "/womensmarch.png",
       tech: ["Wix", "HTML"],
       thumbnail: "/womensMarchSquare.png",
-      display: "wide"
+      display: "wide",
+      slider: "A Wix site with up to 7,000 users/day for the 2018 Denver Women's March.",
+      slider2: "Solo project made in consult with MarchOn"
     }
 ]
 

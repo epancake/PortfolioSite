@@ -67,9 +67,16 @@ class ProjectCard extends Component {
     return (
       <div className="card">
 
-        <main onClick={this.openProjectModal} className="maincard">
+        <main onClick={this.openProjectModal} className="maincard box_industries">
           <h3 className="cardname">{this.props.project.name}</h3>
           <img className="thumbnail" src={this.props.project.thumbnail} alt={this.props.project.name + "thumbnail"}/>
+          <div class="content">
+             <p className="shortDescription">
+              {this.props.project.slider}
+              <br></br>
+              {this.props.project.slider2}
+            </p>
+          </div>
         </main>
 
 

@@ -20,6 +20,19 @@ body {
   background-size: cover;
 }
 
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px;  /* remove scrollbar space */
+  background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
 #body::before {
   opacity: 1;
 }
@@ -239,13 +252,43 @@ p {
   background-color: rgb(97, 131, 93);
   opacity: 0.8;
   border: 1px solid black;
-  width: 33.3%;
+  width: 20%;
+  z-index: 0;
+  position:relative;
+}
+
+.box_industries .content {
+  background-color: rgb(46, 49, 46);
+  opacity: .8;
+  bottom: -100%;
+  color: #fff;
+  left: 0%;
+  text-align: center;
+  position: absolute;
+  transition: bottom 0.5s ease;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.maincard:hover .content {
+  bottom: 0%;
+  height: 77%;  
+}
+
+.shortDescription {
+  color: white;
+  padding: .5rem 1.3rem;
 }
 
 .maincard {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
 }
 
 .projectList {
@@ -510,9 +553,13 @@ li span {
   font-size: 2rem;
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 780px) {
   .name {
     grid-column: 1 / 4
+  }
+
+  .maincard:hover .content {
+    height: 87.2%;  
   }
 
   .tagline {
@@ -613,6 +660,16 @@ li span {
 
   .tall {
     flex-direction: column;
+  }
+
+  .box_industries .content {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .card {
+    width: 51vw;
   }
 }
 
