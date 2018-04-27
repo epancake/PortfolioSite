@@ -222,7 +222,7 @@ a p::selection {
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(31, 33, 33);
+  background-color: rgb(61, 50, 52);
   height: 12.5vh;
   text-align: center;
 }
@@ -247,7 +247,7 @@ p {
 }
 
 .box_industries .content {
-  background-color: rgb(46, 49, 46);
+  background-color: rgb(61, 50, 52);
   opacity: .8;
   bottom: -100%;
   color: #fff;
@@ -374,11 +374,11 @@ p {
 /************** Footer ****************/
 
 .footerContainer{
-  background-color: rgb(31, 33, 33);
+  background-color: rgb(61, 50, 52);
 }
 
 .footer {
-  background-color: rgb(31, 33, 33);
+  background-color: rgb(61, 50, 52);
   margin-top: .5rem;
   padding-bottom: 1rem;
   display: grid;
