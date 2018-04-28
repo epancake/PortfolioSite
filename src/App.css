@@ -246,7 +246,7 @@ p {
   position:relative;
 }
 
-.box_industries .content {
+.box .content {
   background-color: rgb(61, 50, 52);
   opacity: .8;
   bottom: -100%;
@@ -268,7 +268,7 @@ p {
 
 .shortDescription {
   color: white;
-  padding: .5rem 1.3rem;
+  padding: .5rem 1rem;
 }
 
 .maincard {

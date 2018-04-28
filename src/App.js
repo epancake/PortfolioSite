@@ -67,7 +67,7 @@ const projects = [
       thumbnail: "/womensMarchSquare.png",
       display: "wide",
       slider: "A Wix site with up to 7,000 users/day for the 2018 Denver Women's March.",
-      slider2: "Solo project made in consult with MarchOn"
+      slider2: "Solo project coordinated with MarchOn."
     }
 ]
 
