@@ -295,7 +295,7 @@ p {
 }
 
 .thumbnail {
-  width: 75%;
+  height: 15vw;
   margin-bottom: 1rem;
   border: 1px solid rgb(242, 242, 219);
 }
@@ -547,8 +547,8 @@ li span {
     grid-column: 1 / 4
   }
 
-  .maincard:hover .content {
-    height: 87.2%;  
+  .thumbnail {
+    height: 40vw;
   }
 
   .tagline {
@@ -651,14 +651,20 @@ li span {
     flex-direction: column;
   }
 
-  .box_industries .content {
+  .box .content {
     display: none;
   }
 }
 
-@media screen and (max-width: 345px) {
+@media screen and (max-width: 380px) {
   .card {
     width: 51vw;
+  }
+
+
+
+  .content {
+    display: none
   }
 }
 
