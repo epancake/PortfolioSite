@@ -37,11 +37,11 @@ class About extends Component {
     return (
       <div className="about">
           <h2 className="sectionTitle">About</h2>
-          <p>As a full stack web developer, I'm passionate about working on cross-functional teams to bring products to market. I'm happiest when focused on the front-end, coding user experiences that will have an impact. My background in technical writing for the medical industry, coupled with my education in library and information science make me an asset to any team.</p>
+          <p>As a full stack web developer, I'm dedicated to building amazing user experiences and solving interesting problems. I'm happiest when focused on the front-end, coding user experiences that will have an impact. My background in technical writing for the medical industry, coupled with my education in library and information science make me an asset to any team.</p>
           <ul className="strengths">
-            <li><strong>My strengths:</strong> I have an organized approach to coding, an eye for design, and demonstrated success working with teams.</li>
-            <li><strong>Most successful project:</strong> In 2017, as a technical writer I worked with stakeholders across the globe to negotiate content and innovate deliverables for a medical device operators manual. The final deliverable exceeded internal and customer expectations across cultures, and was approved by national regulatory bodies. As a developer I can apply those communication and project innovation skills to everything I do.</li>
-            <li><strong>Currently:</strong> Seeking a position as a web developer on a team in Denver, Colorado.</li>
+            <li><strong>My strengths:</strong> I have a willingness to learn new technologies and jump into whatever language or framework is best for the job, and demonstrated success working with teams.</li>
+            <li><strong>Most successful project:</strong> I worked on an Angular web app for worker's compensation policy holders, which was essentially a form with over 60 fields used to file a worker's compensation claim. My colleagues and I implemented Material Design elements throughout the app to make it easier to navigate and cleaner and faster for users. It turned out so well that we layered an internal layer over it, so that internal insurance processors could use our app to enter info instead of their current systems.</li>
+            <li><strong>Currently:</strong> Working as a software developer on the Injured Worker User Journey team at Pinnacol Assurance in Denver, Colorado.</li>
           </ul>
           <p>My interests include my dog Pete Pancake, news about the wild growth of my hometown of Denver, state and local politics, Pokémon Go, Japanese culture, traveling with my dear sweet husband, and cool sneakers.</p>
           <Button className="tldr-btn" onClick={this.openTldrModal}>TLDR for Developers</Button>
@@ -59,10 +59,11 @@ class About extends Component {
           {"   "}name: "Emily Pancake", <br/>
           {"   "}fullStackDev: true, <br/>
           {"   "}focus: "Front-End", <br/>
-          {"   "}stack: ["PostgreSQL", "Express", "React", "Node.js"], <br/>
+          {"   "}stack: ["Angular", "Rails", "PostgreSQL", "Express", "React", "Node.js"], <br/>
           {"   "}background: ["Technical Writing", "Library Science", "Elections"], <br/>
-          {"   "}values: ["adaptability", "inclusivity", "form follows function"], <br/>
-          {"   "}passionate: true, <br/>  
+          {"   "}values: ["adaptability", "inclusivity", "learning everything all the time"], <br/>
+          {"   "}favoriteLanguage: "JavaScript", <br/>  
+          {"   "}co-founder: "Beer Boarding JavaScript Practice For Champions meetup", <br/>  
           {"   "}dogs: 1 <br/>{"}"}
         </code></pre>
         </Modal>

@@ -1,20 +1,26 @@
-import React from 'react'
 import ProjectCard from './ProjectCard.js'
 
-const Projects = (props) => {
+import React, { Component } from 'react';
 
-  if (!props.projects) {
-    return <p>No data yet, one second please!!!</p>
-  } else if (props.projects) {
-    props.projects.sort(function (a, b) {return a.id - b.id;})
+
+class Projects extends Component {
+
+  componentDidMount () {
+    if (!this.props.projects) {
+      return <p>No data yet, one second please!!!</p>
+    } else if (this.props.projects) {
+      this.props.projects.sort(function (a, b) {return a.id - b.id;})
+    }
   }
-
-  return props.projects.map((project) => {
-    return (
-      <ProjectCard key={project.id}
-        project={project}/>
-    )
-  })
+  
+  render() {
+    return this.props.projects.map((project) => {
+      return (
+          <ProjectCard key={project.id}
+            project={project}/>
+      )
+    })
+  }
 }
 
 export default Projects;

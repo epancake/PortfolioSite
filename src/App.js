@@ -6,21 +6,20 @@ import Projects from "./Components/Projects.js"
 import Resume from "./Components/Resume.js"
 import Footer from "./Components/Footer.js"
 import { Button } from "antd"
-import ScrollableAnchor from "react-scrollable-anchor"
 
 const projects = [
-    { id: 1,
-      name: "Travel Squad",
-      description: "The group travel app that allows you to streamline your group travel plans. Invite trip-mates to your page to weigh in on travel dates, lodging, activities, and chat.",
-      githubRepo: "https://github.com/epancake/travel-squad",
-      deployedLink: "https://travel-squad.club",
-      image: "/travelSquadFull.png",
-      tech: ["React", "Node.js", "Express", "PostgreSQL", "Socket.io", "Nodemailer", "Knex.js", "Heroku"],
-      thumbnail: "/travelsquad.png",
-      display: "wide",
-      slider: "A full stack React app, for group travel. Webscraper, chat, and email features.",
-      slider2: "Galvanize Capstone project."
-    },
+    // { id: 1,
+    //   name: "Travel Squad",
+    //   description: "The group travel app that allows you to streamline your group travel plans. Invite trip-mates to your page to weigh in on travel dates, lodging, activities, and chat.",
+    //   githubRepo: "https://github.com/epancake/travel-squad",
+    //   deployedLink: "https://travel-squad.club",
+    //   image: "/travelSquadFull.png",
+    //   tech: ["React", "Node.js", "Express", "PostgreSQL", "Socket.io", "Nodemailer", "Knex.js", "Heroku"],
+    //   thumbnail: "/travelsquad.png",
+    //   display: "wide",
+    //   slider: "A full stack React app, for group travel. Webscraper, chat, and email features.",
+    //   slider2: "Galvanize Capstone project."
+    // },
     { id: 2,
       name: "Planet Wager",
       description: "The betting app that allows you to bet with your friends and keep track of who's losing spacebucks and who is raking them in. Users can define their own bet, and invite their friends to accept the bet. After all, gambling is not regulated in space! This is a group project developed with Agile methodologies. More details in the Github repo Readme.",
@@ -56,19 +55,19 @@ const projects = [
       display: "wide",
       slider: "A full stack React app made with the AntDesign Library to support my weekly JavaScript meetup.",
       slider2: "Solo project."
-    },
-    { id: 6,
-      name: "Women's March Site",
-      description: "I was honored to make the Website for the 2018 Denver Womens's March. I worked with multiple stakeholders to create and design content according to the branding from the national March On organization. The organizers requested I use Wix so that they could make changes as needed.",
-      githubRepo: null,
-      deployedLink: "https://www.marchoncolorado.org/",
-      image: "/womensmarch.png",
-      tech: ["Wix", "HTML"],
-      thumbnail: "/womensMarchSquare.png",
-      display: "wide",
-      slider: "A Wix site with up to 7,000 users/day for the 2018 Denver Women's March.",
-      slider2: "Solo project coordinated with MarchOn."
     }
+    // { id: 6,
+    //   name: "Women's March Site",
+    //   description: "I was honored to make the Website for the 2018 Denver Womens's March. I worked with multiple stakeholders to create and design content according to the branding from the national March On organization. The organizers requested I use Wix so that they could make changes as needed.",
+    //   githubRepo: null,
+    //   deployedLink: "https://www.marchoncolorado.org/",
+    //   image: "/womensmarch.png",
+    //   tech: ["Wix", "HTML"],
+    //   thumbnail: "/womensMarchSquare.png",
+    //   display: "wide",
+    //   slider: "A Wix site with up to 7,000 users/day for the 2018 Denver Women's March.",
+    //   slider2: "Solo project coordinated with MarchOn."
+    // }
 ]
 
 class App extends Component {
@@ -139,25 +138,20 @@ class App extends Component {
             <div className={this.state.ghost}>
               <p className={this.state.typewriter}>{this.state.jokeText}</p>
             </div>
-            <a className="arrowDown" href="#projects" rel="noopener noreferrer"><Button shape="circle" icon="down" /></a>
-          <ScrollableAnchor id={'projects'}>
-            <h2 className="sectionTitle notop">Projects</h2>
-          </ScrollableAnchor>
+            <a className="arrowDown" href="#about" rel="noopener noreferrer"><Button shape="circle" icon="down" /></a>
+            <h2 className="sectionTitle notop">Keep scrolling...</h2>
           </header>
-          <section className="projectList">
-            <Projects projects={projects} key="2" />
-          </section>
-          <ScrollableAnchor id={"about"} name="about">
+            <a name="about"></a>
             <About key="1"/>
-          </ScrollableAnchor>
-          <ScrollableAnchor id={"resume"} name="resume">
-            <h2 className="placeholder-for-scroll"></h2>
-          </ScrollableAnchor>
-            <Resume key="3"/>
-          <ScrollableAnchor id={"contact"} name="contact">
-            <h2 className="placeholder-for-scroll"></h2>
-          </ScrollableAnchor>
-            <Footer key="4"/>
+            <a name="projects"></a>
+            <div className="projectList">
+              <Projects projects={projects} key="1234" />
+            </div>
+            <a name="resume"></a>
+            <Resume key="4"/>
+            <a name="contacts"></a>
+
+            <Footer key="5"/>
         </div>
         <div className={this.state.menuOpen ? "burgerMenu" : "burgerMenu hidden"}>
           <nav>
@@ -174,7 +168,7 @@ class App extends Component {
                 <p className="burgernavtitle">Contact</p>
               </a>
           </nav>
-          <a href="#" className="close" onClick={this.toggleMenu}></a>
+          <div href="#" className="close" onClick={this.toggleMenu}></div>
         </div>
       </div>
     );
