@@ -241,7 +241,7 @@ p {
   background-color: rgb(97, 131, 93);
   opacity: 0.8;
   border: 1px solid black;
-  width: 33.3%;
+  width: 25%;
   z-index: 0;
   position:relative;
 }
@@ -381,11 +381,23 @@ p {
   background-color: rgb(61, 50, 52);
   margin-top: .5rem;
   padding-bottom: 1rem;
-  display: grid;
-  grid-template-rows: 33% 33% 10%;
-  grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr;
   color: white;
   cursor: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 380px) {
+  .footer {
+    flex-direction: column;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
 }
 
 .icon {
@@ -402,8 +414,9 @@ p {
   font-family: 'Nunito', sans-serif;
 }
 
-.copy {
-  padding: 0 .75rem 0 0;
+.copyright {
+  display: flex;
+  justify-content: center;
 }
 
 .hamburger {
@@ -595,19 +608,6 @@ li span {
     margin: 0;
   }
 
-  .footer {
-    grid-template-columns: 35% 65%;
-    grid-template-rows: 15% 15% 15% 15% 15% 15%;
-  }
-
-  .copyright-icon {
-    grid-row: 6
-  }
-
-  .copyright-text {
-    grid-row: 6
-  }
-
   .about {
     padding: 0 1rem 1rem 1rem;
   }
@@ -616,10 +616,6 @@ li span {
     width: 100px;
     overflow: 'scroll'
   }
-
-  /* .ant-modal-body {
-    width: 40%;
-  } */
 
   .ant-modal-content{
      margin-left: 0rem;
@@ -657,7 +653,7 @@ li span {
 
 @media screen and (max-width: 380px) {
   .card {
-    width: 51vw;
+    width: 50%;
   }
 
   .box .content {
@@ -745,6 +741,10 @@ li span {
 }
 .close:after {
   transform: rotate(-45deg);
+}
+
+.keepScrolling {
+  color: rgb(97, 131, 93);
 }
 
 

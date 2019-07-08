@@ -55,7 +55,7 @@ const projects = [
       display: "wide",
       slider: "A full stack React app made with the AntDesign Library to support my weekly JavaScript meetup.",
       slider2: "Solo project."
-    }
+    },
     // { id: 6,
     //   name: "Women's March Site",
     //   description: "I was honored to make the Website for the 2018 Denver Womens's March. I worked with multiple stakeholders to create and design content according to the branding from the national March On organization. The organizers requested I use Wix so that they could make changes as needed.",
@@ -67,7 +67,19 @@ const projects = [
     //   display: "wide",
     //   slider: "A Wix site with up to 7,000 users/day for the 2018 Denver Women's March.",
     //   slider2: "Solo project coordinated with MarchOn."
-    // }
+    // },
+    { id: 7,
+      name: "Grepo",
+      description: "A search tool for Repos. Grepo allows the users to make a request to the github api, matching search terms and sorting in multiple ways.",
+      githubRepo: "https://github.com/epancake/Grepo",
+      deployedLink: "https://grepo-pancake.firebaseapp.com/",
+      image: "/grepo.png",
+      tech: ["React", "Redux", "React Hooks", "Node.js", "Express", "Heroku", "Firebase"],
+      thumbnail: "/Grepo-Square.png",
+      display: "wide",
+      slider: "A github repo search engine.",
+      slider2: "Solo project."
+    }
 ]
 
 class App extends Component {
@@ -107,7 +119,7 @@ class App extends Component {
         <div id="background">
           <div className="header">
             <div className="logobox">
-              <img className="logo" src="/eplogo.png" alt="logo"/>
+              <img className="logo" src="/pancakeIcon.png" alt="logo"/>
             </div>
 
             <nav className="nav">
@@ -116,11 +128,11 @@ class App extends Component {
                 <div className="burger midBurger"></div>
                 <div className="burger lowBurger"></div>
               </div>
-              <a className="navitem" href="#projects">
-                <p>Projects</p>
-              </a>
               <a className="navitem" href="#about">
                 <p>About</p>
+              </a>
+              <a className="navitem" href="#projects">
+                <p>Projects</p>
               </a>
               <a className="navitem" href="#resume">
                 <p>Resume</p>
@@ -135,31 +147,32 @@ class App extends Component {
                 <h1 className="App-title">Emily Pancake</h1>
             </a>
             <h2 className="tagline" >Web Developer and Design Enthusiast</h2>
-            <div className={this.state.ghost}>
+            {/* <div className={this.state.ghost}>
               <p className={this.state.typewriter}>{this.state.jokeText}</p>
-            </div>
+            </div> */}
             <a className="arrowDown" href="#about" rel="noopener noreferrer"><Button shape="circle" icon="down" /></a>
-            <h2 className="sectionTitle notop">Keep scrolling...</h2>
+            <h2 className="keepScrolling notop">Keep scrolling...</h2>
           </header>
             <a name="about"></a>
             <About key="1"/>
             <a name="projects"></a>
+            <h2 className="sectionTitle">Projects</h2>
             <div className="projectList">
               <Projects projects={projects} key="1234" />
             </div>
             <a name="resume"></a>
             <Resume key="4"/>
-            <a name="contacts"></a>
+            <a name="contact"></a>
 
             <Footer key="5"/>
         </div>
         <div className={this.state.menuOpen ? "burgerMenu" : "burgerMenu hidden"}>
           <nav>
-             <a className="burgernavitem" href="#projects" onClick={this.toggleMenu}>
-                <p className="burgernavtitle">Projects</p>
-              </a>
               <a className="burgernavitem" href="#about" onClick={this.toggleMenu}>
                 <p className="burgernavtitle">About</p>
+              </a>
+              <a className="burgernavitem" href="#projects" onClick={this.toggleMenu}>
+                <p className="burgernavtitle">Projects</p>
               </a>
               <a className="burgernavitem" href="#resume" onClick={this.toggleMenu}>
                 <p className="burgernavtitle">Resume</p>
